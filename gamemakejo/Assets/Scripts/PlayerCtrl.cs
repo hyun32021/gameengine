@@ -26,6 +26,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private int playerExp = 0;
     [SerializeField] private int maxExp = 10;
     private int playerLv = 1;
+
+    public WeaponManagerUI weaponManagerUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +105,11 @@ public class PlayerCtrl : MonoBehaviour
         maxExp += 5;
         playerLv += 1;
         Debug.Log("Level UP");
+        // 레벨업 시 WeaponManagerUI를 열기
+        if (weaponManagerUI != null)
+        {
+            weaponManagerUI.ShowWeaponUI(); // 레벨업 시 WeaponManagerUI를 활성화
+        }
     }
 }
 

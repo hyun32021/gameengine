@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Magic1
   m_EditorClassIdentifier: 
   weaponName: Magic1
-  weaponPrefab: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6168621972019189955, guid: 75c93b956e4dbf74fbfa7aff5ba30375, type: 3}
+  projectilePrefab: {fileID: 6168621972019189955, guid: 75c93b956e4dbf74fbfa7aff5ba30375, type: 3}
   attackSpeed: 1
   attackRange: 1
   attackPower: 1
