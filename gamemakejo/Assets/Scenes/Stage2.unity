@@ -527,7 +527,7 @@ MonoBehaviour:
   target: {fileID: 643094591}
   distance: 10
   height: 5
-  leftOffsetValue: -2
+  leftOffsetValue: -1
 --- !u!1001 &100652146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,6 +972,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9581be996bd1d344b8e3a1fdeb60a5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lobbyScene: Lobby
+  stage1Scene: Stage1
+  stage2Scene: Stage2
+  stage3Scene: Stage3
+  gameOverScene: GameOver
+  clearScene: Clear
   player: {fileID: 847704119}
   monsterPrefab: {fileID: 850239780912390042, guid: 7f787e556c9debe4da692d0d79b2c600, type: 3}
   monsterPrefab2: {fileID: 3961073235556350802, guid: 2a8bcc9e9fd3c4c40a54da5f9ff34630, type: 3}
@@ -3652,7 +3658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1570777180}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
-  crosshairPrefab: {fileID: 7753215740747372457, guid: e60a8ede1c4ab9544b51dddb9e216ea8, type: 3}
   deadPrefab: {fileID: 216988705}
 --- !u!4 &905269658
 Transform:

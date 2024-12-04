@@ -488,6 +488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9581be996bd1d344b8e3a1fdeb60a5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lobbyScene: Lobby
+  stage1Scene: Stage1
+  stage2Scene: Stage2
+  stage3Scene: Stage3
+  gameOverScene: GameOver
+  clearScene: Clear
   player: {fileID: 1471005041}
   monsterPrefab: {fileID: 1931298151966786, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
   monsterPrefab2: {fileID: 1524411113276028, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
@@ -1464,7 +1470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1692066013}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
-  crosshairPrefab: {fileID: 0}
   deadPrefab: {fileID: 1182813272}
 --- !u!4 &1060370560
 Transform:
@@ -1960,7 +1965,7 @@ MonoBehaviour:
   playerPosition: {fileID: 763161064}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   allWeapons:
   - {fileID: 11400000, guid: 9bffd2a9d8e159e44a3cce5c7145d71a, type: 2}
   - {fileID: 11400000, guid: fa191850e334bb4428fea173beeadc95, type: 2}

@@ -11,19 +11,12 @@ public class UIGenerator : MonoBehaviour
     private TextMeshProUGUI timeText;
     private float elapsedTime = 0f;
 
-    public GameObject crosshairPrefab; // 조준점 UI 프리팹을 참조
-    private GameObject crosshair;
-
     private GameObject deadMasage;
     public GameObject deadPrefab;
 
     void Start()
     {
         CreateText(new Vector2(0, -50), "경과 시간: 00:00");
-
-        // 화면 중앙에 조준점을 생성
-        crosshair = Instantiate(crosshairPrefab, canvas.transform);
-        crosshair.GetComponent<RectTransform>().anchoredPosition = new Vector2(-20, -10);
     }
 
     void Update()
