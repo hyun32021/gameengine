@@ -11,12 +11,19 @@ public class UIGenerator : MonoBehaviour
     private TextMeshProUGUI timeText;
     private float elapsedTime = 0f;
 
+    public GameObject crosshairPrefab; // 조준점 UI 프리팹을 참조
+    private GameObject crosshair;
+
     private GameObject deadMasage;
     public GameObject deadPrefab;
 
     void Start()
     {
         CreateText(new Vector2(0, -50), "경과 시간: 00:00");
+
+        // 화면 중앙에 조준점을 생성
+        crosshair = Instantiate(crosshairPrefab, canvas.transform);
+        crosshair.GetComponent<RectTransform>().anchoredPosition = new Vector2(-20, -10);
     }
 
     void Update()
@@ -31,9 +38,9 @@ public class UIGenerator : MonoBehaviour
     {
         GameObject textObj = Instantiate(textPrefab, canvas.transform);
 
-        // RectTransform을 가져와서 위치를 설정
+        // RectTransform을 가져와서 위치를 화면 상단 중앙에 설정
         RectTransform rectTransform = textObj.GetComponent<RectTransform>();
-        rectTransform.anchoredPosition = position;
+        rectTransform.anchoredPosition = position;  // (0, 100)으로 시작 위치 설정
 
         // Anchor 설정 (상단 중앙)
         rectTransform.anchorMin = new Vector2(0.5f, 1f);
@@ -45,5 +52,4 @@ public class UIGenerator : MonoBehaviour
         timeText.text = initialText;
     }
 }
-
 

@@ -497,7 +497,7 @@ MonoBehaviour:
   maxSpawnDistance: 20
   spawnInterval: 5
   spawnInterval_Boss: 300
-  nextSceneName: ForestScene
+  nextSceneName: Stage2
 --- !u!4 &463667352
 Transform:
   m_ObjectHideFlags: 0
@@ -1464,6 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1692066013}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
+  crosshairPrefab: {fileID: 0}
   deadPrefab: {fileID: 1182813272}
 --- !u!4 &1060370560
 Transform:

@@ -7,23 +7,30 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    public string lobbyScene = "Lobby"; // ë¡œë¹„ ì”¬
+    public string stage1Scene = "Stage1"; // Stage1 ì”¬
+    public string stage2Scene = "Stage2"; // Stage2 ì”¬
+    public string stage3Scene = "Stage3"; // Stage3 ì”¬
+    public string gameOverScene = "GameOver"; // ê²Œìž„ ì˜¤ë²„ ì”¬
+    public string clearScene = "Clear"; // í´ë¦¬ì–´ ì”¬
+
     public GameObject player;
     public GameObject monsterPrefab;
     public GameObject monsterPrefab2;
-    public GameObject bossPrefab; // º¸½º ¸ó½ºÅÍ ÇÁ¸®ÆÕ
+    public GameObject bossPrefab; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    public int numberOfMonsters = 5; // ÇÑ ¹ø¿¡ »ý¼ºÇÒ ¸ó½ºÅÍ ¼ö
+    public int numberOfMonsters = 5; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     public float minSpawnDistance = 10f;
     public float maxSpawnDistance = 20f;
-    public float spawnInterval = 5f; // ¸ó½ºÅÍ »ý¼º ÁÖ±â
-    public float spawnInterval_Boss = 300f; // º¸½º ¸ó½ºÅÍ ÃâÇö ÁÖ±â
+    public float spawnInterval = 5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
+    public float spawnInterval_Boss = 300f;
 
-    private float spawnTimer = 0f; // °æ°ú ½Ã°£ ÃßÀû
-    private float spawnTimer_Boss = 0f;//º¸½º ¸ó½ºÅÍ ÃâÇö½Ã°£
-    private bool bossSpawned = false; // º¸½º »ý¼º ¿©ºÎ È®ÀÎ
+    private float spawnTimer = 0f; // ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
+    private float spawnTimer_Boss = 0f;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ã°ï¿½
+    private bool bossSpawned = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 
     public string nextSceneName;
-
     void Awake()
     {
         if (Instance != null)
@@ -32,78 +39,60 @@ public class GameManager : MonoBehaviour
         }
         else Instance = this;
     }
+    void Start()
+    {
+        
+    }
 
+    // Update is called once per frame
     void Update()
     {
-        // °æ°ú ½Ã°£À» ÃßÀûÇÏ°í spawnInterval¿¡ µµ´ÞÇÏ¸é ¸ó½ºÅÍ ¼ÒÈ¯
+        // ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ spawnIntervalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         spawnTimer += Time.deltaTime;
         spawnTimer_Boss += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
             SpawnMonsters();
-            spawnTimer = 0f; // Å¸ÀÌ¸Ó ÃÊ±âÈ­
+            spawnTimer = 0f; // Å¸ï¿½Ì¸ï¿½ ï¿½Ê±ï¿½È­
         }
         if (!bossSpawned)
         {
+            spawnTimer_Boss += Time.deltaTime;
+
             if (spawnTimer_Boss >= spawnInterval_Boss)
             {
                 SpawnBoss();
-                bossSpawned = true; // º¸½º°¡ ÇÑ ¹ø¸¸ »ý¼ºµÇµµ·Ï ¼³Á¤
+                bossSpawned = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
-
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     void SpawnMonsters()
     {
         for (int i = 0; i < numberOfMonsters; i++)
         {
-            Vector3 spawnPosition = GenerateRandomGroundSpawnPoint();
+            Vector3 spawnPosition = GenerateRandomSpawnPoint();
             int monsterType = Random.Range(0, 2);
             if (monsterType == 0)
                 Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
-            else
+            if (monsterType == 1)
                 Instantiate(monsterPrefab2, spawnPosition, Quaternion.identity);
         }
     }
-
     void SpawnBoss()
     {
-        if (!bossSpawned)
-        {
-            Vector3 spawnPosition = GenerateRandomGroundSpawnPoint();
-            Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-            bossSpawned = true; // º¸½º°¡ ÇÑ ¹ø¸¸ »ý¼ºµÇµµ·Ï ¼³Á¤
-            Debug.Log("Boss Monster Spawned!");
-        }
+        Vector3 spawnPosition = GenerateRandomSpawnPoint();
+        Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+        Debug.Log("Boss Monster Spawned!");
     }
-
-    // Ground ÅÂ±×¸¦ °¡Áø ¿ÀºêÁ§Æ® À§¿¡ ·£´ý ½ºÆù Æ÷ÀÎÆ® »ý¼º
-    Vector3 GenerateRandomGroundSpawnPoint()
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+    Vector3 GenerateRandomSpawnPoint()
     {
-        // "Ground" ÅÂ±×¸¦ °¡Áø ¿ÀºêÁ§Æ®¸¦ Ã£À½
-        GameObject groundObject = GameObject.FindGameObjectWithTag("Ground");
-
-        // GroundÀÇ Collider¸¦ »ç¿ëÇÏ¿© À§Ä¡ ¹üÀ§ °è»ê
-        Collider groundCollider = groundObject.GetComponent<Collider>();
-        Vector3 groundPosition = groundObject.transform.position;
-
-        // GroundÀÇ bounds ³»¿¡¼­ ·£´ýÇÑ x, z °ª »ý¼º
-        float randomX = Random.Range(groundCollider.bounds.min.x, groundCollider.bounds.max.x);
-        float randomZ = Random.Range(groundCollider.bounds.min.z, groundCollider.bounds.max.z);
-
-        // Raycast¸¦ »ç¿ëÇÏ¿© ÇØ´ç À§Ä¡ÀÇ Á¤È®ÇÑ Y°ª Ã£±â
-        RaycastHit hit;
-        if (Physics.Raycast(new Vector3(randomX, 100f, randomZ), Vector3.down, out hit))
-        {
-            // Raycast·Î ¾òÀº Y°ªÀ» »ç¿ëÇÏ¿© Áö¸é À§Ä¡¿¡ ¸ÂÃá ½ºÆù Æ÷ÀÎÆ® »ý¼º
-            return new Vector3(randomX, hit.point.y, randomZ);
-        }
-
-        // ¸¸¾à Raycast°¡ ½ÇÆÐÇÒ °æ¿ì, ±âº»ÀûÀÎ ³ôÀÌ¸¦ ¹ÝÈ¯ (ºñ»ó »óÈ²)
-        return new Vector3(randomX, groundPosition.y, randomZ);
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        float randomDistance = Random.Range(minSpawnDistance, maxSpawnDistance);
+        return player.transform.position + new Vector3(randomDirection.x, 0, randomDirection.y) * randomDistance;
     }
-
-    // Á¶°ÇÀ» ¸¸Á·ÇÒ ¶§ ´ÙÀ½ ¾ÀÀ¸·Î ÀüÈ¯
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
     public void LoadNextScene()
     {
         if (!string.IsNullOrEmpty(nextSceneName))
@@ -111,6 +100,5 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(nextSceneName);
         }
     }
-
 
 }

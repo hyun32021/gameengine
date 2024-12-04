@@ -1,1 +1,1 @@
-C:\Users\hyun3\gamemakejo
+/Users/jungayang/Documents/GitHub/gameengine/gamemakejo
