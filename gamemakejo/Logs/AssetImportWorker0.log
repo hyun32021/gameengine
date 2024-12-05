@@ -15,7 +15,7 @@ C:/Users/dlaal/Documents/GitHub/gameengine/gamemakejo
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51201
+52139
 Successfully changed project path to: C:/Users/dlaal/Documents/GitHub/gameengine/gamemakejo
 C:/Users/dlaal/Documents/GitHub/gameengine/gamemakejo
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ C:/Users/dlaal/Documents/GitHub/gameengine/gamemakejo
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19992]  Target information:
+Player connection [9224]  Target information:
 
-Player connection [19992]  * "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 3378890830 [EditorId] 3378890830 [Version] 1048832 [Id] WindowsEditor(7,IMU) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [9224]  * "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 3255324536 [EditorId] 3255324536 [Version] 1048832 [Id] WindowsEditor(7,IMU) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [19992] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [19992] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9224] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [9224] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
-Refreshing native plugins compatible for Editor in 6.16 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.44f1 (c3ae09b9f03c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Resources/UnitySubsystems
@@ -72,46 +72,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006048 seconds.
-- Loaded All Assemblies, in  0.264 seconds
+Registered in 0.006161 seconds.
+- Loaded All Assemblies, in  0.261 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.208 seconds
-Domain Reload Profiling: 471ms
-	BeginReloadAssembly (82ms)
+- Finished resetting the current domain, in  0.207 seconds
+Domain Reload Profiling: 467ms
+	BeginReloadAssembly (80ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (100ms)
-		LoadAssemblies (80ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (101ms)
+		LoadAssemblies (78ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (98ms)
-			TypeCache.Refresh (97ms)
-				TypeCache.ScanAssembly (88ms)
+		AnalyzeDomain (100ms)
+			TypeCache.Refresh (99ms)
+				TypeCache.ScanAssembly (89ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (209ms)
+	FinalizeReload (207ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (169ms)
+		SetupLoadedEditorAssemblies (173ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (11ms)
 			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (115ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
+			ProcessInitializeOnLoadAttributes (116ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,51 +120,51 @@ Domain Reload Profiling: 471ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.468 seconds
+- Loaded All Assemblies, in  0.456 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.578 seconds
-Domain Reload Profiling: 1043ms
-	BeginReloadAssembly (121ms)
+- Finished resetting the current domain, in  0.590 seconds
+Domain Reload Profiling: 1044ms
+	BeginReloadAssembly (110ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (25ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (279ms)
-		LoadAssemblies (208ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (280ms)
+		LoadAssemblies (213ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (135ms)
-			TypeCache.Refresh (114ms)
-				TypeCache.ScanAssembly (104ms)
+		AnalyzeDomain (129ms)
+			TypeCache.Refresh (113ms)
+				TypeCache.ScanAssembly (102ms)
 			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (578ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (590ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (479ms)
+		SetupLoadedEditorAssemblies (492ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (2ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (43ms)
-			ProcessInitializeOnLoadAttributes (404ms)
-			ProcessInitializeOnLoadMethodAttributes (16ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (416ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3160 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (54.5 KB). Loaded Objects now: 3628.
-Memory consumption went from 126.8 MB to 126.7 MB.
-Total: 2.825700 ms (FindLiveObjects: 0.164600 ms CreateObjectMapping: 0.070400 ms MarkObjects: 2.498000 ms  DeleteObjects: 0.092000 ms)
+Unloading 3162 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (54.9 KB). Loaded Objects now: 3631.
+Memory consumption went from 128.0 MB to 128.0 MB.
+Total: 2.707300 ms (FindLiveObjects: 0.184300 ms CreateObjectMapping: 0.075700 ms MarkObjects: 2.366400 ms  DeleteObjects: 0.080000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,56 +182,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3378.726965 seconds.
-  path: Assets/Prefabs/Monster.prefab
-  artifactKey: Guid(cdbd34c37d8a9f345b7ca6751fa9a313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monster.prefab using Guid(cdbd34c37d8a9f345b7ca6751fa9a313) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+  Time since last request: 10402.493757 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Models
+  artifactKey: Guid(ad4081446914afa4e94efff5e5b27056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Models using Guid(ad4081446914afa4e94efff5e5b27056) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'b15f5945165cf4da907b269751a404e2') in 0.002593 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.990091 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs
+  artifactKey: Guid(30f354b2984b43147b902803fe8a4ce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs using Guid(30f354b2984b43147b902803fe8a4ce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '2d21475a8ef1861e61cfcdb178c8ec1a') in 0.000410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.686244 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects
+  artifactKey: Guid(fafa6ed23af356445b9387cba7732fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects using Guid(fafa6ed23af356445b9387cba7732fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '762095ede0b5e025c5a7d9ad1868e4e4') in 0.000404 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.062167 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Charge slash blue.prefab
+  artifactKey: Guid(8b20002c2b69a9d44ab5bae8e1d923cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Charge slash blue.prefab using Guid(8b20002c2b69a9d44ab5bae8e1d923cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '4fd1ec343aaffbe911bf4b34da6f26bf') in 0.081590 seconds
+ -> (artifact id: 'dccfa39c3a139918dd2ea4db65fa120e') in 0.082330 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
+Number of asset objects unloaded after import = 33
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Prefabs/Time(TMP).prefab
-  artifactKey: Guid(bc6fc07afaaa7324199a36f6b40147a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Time(TMP).prefab using Guid(bc6fc07afaaa7324199a36f6b40147a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '5e5f57846d584e40fe0d8c9cb319bb6c') in 0.027609 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Electro slash.prefab
+  artifactKey: Guid(4aa9f30a28a77224ba84b2a2c334c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Electro slash.prefab using Guid(4aa9f30a28a77224ba84b2a2c334c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '98e1144f4ec4fb7496ff09dcb6a02273') in 0.014566 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
+Number of asset objects unloaded after import = 28
 ========================================================================
 Received Import Request.
-  Time since last request: 12.126712 seconds.
-  path: Assets/Scripts/WeaponData.cs
-  artifactKey: Guid(eb118dbfbf442a14aa8082ce8f800477) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WeaponData.cs using Guid(eb118dbfbf442a14aa8082ce8f800477) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '7d7069f3e3b64ef8302bb5427d669a9f') in 0.000459 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Stone slash.prefab
+  artifactKey: Guid(3407e378c048bb5438424b28c7740b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Stone slash.prefab using Guid(3407e378c048bb5438424b28c7740b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '693861eef7732e19527869bf0ec9ecc0') in 0.015846 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.672287 seconds.
-  path: Assets/Scripts/WeaponManager.cs
-  artifactKey: Guid(f5398bfae94974d498d69bbe1e43ca38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WeaponManager.cs using Guid(f5398bfae94974d498d69bbe1e43ca38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: '0b0981f802c3cf2f8e613985d5568c12') in 0.000443 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.802152 seconds.
-  path: Assets/Scripts/WeaponManagerUI.cs
-  artifactKey: Guid(b01329178bd0ab944a9586b6b43cf101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WeaponManagerUI.cs using Guid(b01329178bd0ab944a9586b6b43cf101) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: 'bccb42c993a3f9c044376afa29bbd09b') in 0.000410 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 27.291281 seconds.
-  path: Assets/Used/Magic1.asset
-  artifactKey: Guid(5462cbb97d619d14896e1e6fff05393a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Used/Magic1.asset using Guid(5462cbb97d619d14896e1e6fff05393a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
- -> (artifact id: 'cfc5a84fe279088aa2bfd5481cc666f3') in 0.002882 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 28
