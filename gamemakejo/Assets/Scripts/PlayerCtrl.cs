@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    public SoundManager soundManager; // SoundManager 참조
+
     private float v = 0;     //수직 입력을 저장할 변수 (앞뒤 이동)
     private float h = 0;     //수평 입력을 저장할 변수 (좌우 이동)
 
@@ -28,19 +29,26 @@ public class PlayerCtrl : MonoBehaviour
     private int playerLv = 1;
 
     public WeaponManagerUI weaponManagerUI;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        if (soundManager == null)
+        {
+            soundManager = FindObjectOfType<SoundManager>(); // 자동으로 찾기
+        }
+        _animator = GetComponent<Animator>();  // Animator 컴포넌트 초기화
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerExp >= maxExp)
+        if (playerExp >= maxExp)
         {
             LevelUP();
         }
+
         _animator.SetBool("p_Attack", false);
         v = Input.GetAxis("Vertical");
         h = Input.GetAxis("Horizontal");
@@ -69,14 +77,16 @@ public class PlayerCtrl : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             FireBullet();
+            soundManager.PlayShootSound();  // 총알 발사 사운드 호출
             _animator.SetBool("p_Attack", true);
         }
+
         if (playerHp <= 0)
         {
-            
+            // 플레이어 사망 시 처리 (필요한 코드 작성)
         }
     }
-    
+
     // 총알 발사 메서드
     private void FireBullet()
     {
@@ -90,6 +100,7 @@ public class PlayerCtrl : MonoBehaviour
             Debug.LogWarning("Bullet or Fire Transform is not set up!");
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Exp"))
@@ -99,12 +110,14 @@ public class PlayerCtrl : MonoBehaviour
             Debug.Log("Exp: " + playerExp);
         }
     }
+
     void LevelUP()
     {
         playerExp = 0;
         maxExp += 5;
         playerLv += 1;
         Debug.Log("Level UP");
+
         // 레벨업 시 WeaponManagerUI를 열기
         if (weaponManagerUI != null)
         {
@@ -112,4 +125,3 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 }
-
