@@ -27,7 +27,7 @@ public class MonsterCtrl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            m_Animator.SetBool("getHit", true);
+            //m_Animator.SetBool("getHit", true);
         }
     }
     void Start()
@@ -42,7 +42,7 @@ public class MonsterCtrl : MonoBehaviour
         _target = GameObject.FindWithTag("Player");
         m_Agent.SetDestination(_target.transform.position);
 
-        m_Animator.SetBool("getHit", false);
+        //m_Animator.SetBool("getHit", false);
 
         if (HP <= 0)
         {

@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
         }
         if (!bossSpawned)
         {
-            spawnTimer_Boss += Time.deltaTime;
 
             if (spawnTimer_Boss >= spawnInterval_Boss)
             {
@@ -71,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < numberOfMonsters; i++)
         {
-            Vector3 spawnPosition = GenerateRandomSpawnPoint();
+            Vector3 spawnPosition = RandomSpawnPoint();
             int monsterType = Random.Range(0, 2);
             if (monsterType == 0)
                 Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
@@ -81,17 +80,57 @@ public class GameManager : MonoBehaviour
     }
     void SpawnBoss()
     {
-        Vector3 spawnPosition = GenerateRandomSpawnPoint();
+        Vector3 spawnPosition = RandomSpawnPoint();
         Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
         Debug.Log("Boss Monster Spawned!");
     }
-    // �÷��̾�κ��� ���� �Ÿ� ������ ���� ���� ����Ʈ ����
-    Vector3 GenerateRandomSpawnPoint()
+    // Ground 태그를 가진 오브젝트 위에 랜덤 스폰 포인트 생성
+    Vector3 RandomSpawnPoint()
     {
-        Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        float randomDistance = Random.Range(minSpawnDistance, maxSpawnDistance);
-        return player.transform.position + new Vector3(randomDirection.x, 0, randomDirection.y) * randomDistance;
+        // "Ground" 태그를 가진 오브젝트를 찾음
+        GameObject groundObject = GameObject.FindGameObjectWithTag("Ground");
+
+        // Ground의 Collider를 사용하여 위치 범위 계산
+        Collider groundCollider = groundObject.GetComponent<Collider>();
+
+        // Ground의 bounds를 가져옴
+        Vector3 minBounds = groundCollider.bounds.min;
+        Vector3 maxBounds = groundCollider.bounds.max;
+
+        float currentRangeReduction = 0.0f; // 범위 축소 값 초기화
+        float maxRangeReduction = 0.5f; // 범위를 축소할 최대 값 (50% 축소 예제)
+
+        int maxAttempts = 10; // 최대 재시도 횟수
+        for (int i = 0; i < maxAttempts; i++)
+        {
+            // 현재 축소된 범위를 적용
+            float randomX = Random.Range(
+                Mathf.Lerp(minBounds.x, maxBounds.x, currentRangeReduction),
+                Mathf.Lerp(maxBounds.x, minBounds.x, currentRangeReduction)
+            );
+            float randomZ = Random.Range(
+                Mathf.Lerp(minBounds.z, maxBounds.z, currentRangeReduction),
+                Mathf.Lerp(maxBounds.z, minBounds.z, currentRangeReduction)
+            );
+
+            // Raycast로 지면의 정확한 Y 좌표를 탐색
+            RaycastHit hit;
+            if (Physics.Raycast(new Vector3(randomX, 100f, randomZ), Vector3.down, out hit))
+            {
+                // Raycast 성공, 정확한 스폰 지점 반환
+                return new Vector3(randomX, hit.point.y, randomZ);
+            }
+
+            // Raycast 실패 시 범위를 점진적으로 줄임
+            currentRangeReduction += maxRangeReduction / maxAttempts;
+            Debug.LogWarning($"Raycast failed. Reducing range... Attempt {i + 1}/{maxAttempts}");
+        }
+
+        // 모든 시도 실패 시 예외 처리
+        Debug.LogError("Failed to find a valid spawn point within the bounds.");
+        throw new System.Exception("Unable to generate a valid spawn point!");
     }
+
     // ������ ������ �� ���� ������ ��ȯ
     public void LoadNextScene()
     {
