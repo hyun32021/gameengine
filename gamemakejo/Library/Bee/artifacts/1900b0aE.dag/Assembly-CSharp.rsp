@@ -360,6 +360,7 @@
 "Assets/Scripts/LobbyManager.cs"
 "Assets/Scripts/MonsterCtrl.cs"
 "Assets/Scripts/PlayerCtrl.cs"
+"Assets/Scripts/SceneController.cs"
 "Assets/Scripts/UIGenerator.cs"
 "Assets/Scripts/WeaponData.cs"
 "Assets/Scripts/WeaponManager.cs"
