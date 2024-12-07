@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   weaponName: Sword
+  weaponType: 0
   weaponPrefab: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
   projectilePrefab: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
   attackSpeed: 1

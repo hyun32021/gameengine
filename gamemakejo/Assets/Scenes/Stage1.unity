@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4780707492027098096, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 970977378}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2266,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedWeapons:
-  - {fileID: 11400000, guid: 9bffd2a9d8e159e44a3cce5c7145d71a, type: 2}
+  - {fileID: 11400000, guid: fa191850e334bb4428fea173beeadc95, type: 2}
   weaponSlotParent: {fileID: 2017979109}
   playerPosition: {fileID: 763161064}
   enemyLayer:
@@ -2275,7 +2279,7 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 11400000, guid: 9bffd2a9d8e159e44a3cce5c7145d71a, type: 2}
   - {fileID: 11400000, guid: fa191850e334bb4428fea173beeadc95, type: 2}
-  - {fileID: 11400000, guid: 30fd3eb20fda4464f9851379d2a38840, type: 2}
+  - {fileID: 11400000, guid: 3b607392291fde14aa7bd4ad1b93567b, type: 2}
   - {fileID: 11400000, guid: 5462cbb97d619d14896e1e6fff05393a, type: 2}
   - {fileID: 11400000, guid: 525275f1c78ad5343956d0c651170567, type: 2}
   - {fileID: 11400000, guid: 520b92e2fa2dd9d4999460f4e073c88e, type: 2}
@@ -2911,7 +2915,7 @@ PrefabInstance:
     - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 6168621972019189955, guid: 75c93b956e4dbf74fbfa7aff5ba30375, type: 3}
+      objectReference: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
     - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: fireTr
       value: 
@@ -2928,6 +2932,10 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 970977378}
     - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: weaponManagerUI
       value: 
@@ -4132,6 +4140,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 967278324457730553, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 970977378}
     - target: {fileID: 5867750087169627001, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_Speed
       value: 7

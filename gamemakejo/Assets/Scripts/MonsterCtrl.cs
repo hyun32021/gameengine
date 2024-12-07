@@ -14,8 +14,10 @@ public class MonsterCtrl : MonoBehaviour
 
     public GameObject expGem;
 
-    public int HP = 5;
+    public float HP = 5;
 
+    public delegate void MonsterDeathEventHandler();
+    public static event MonsterDeathEventHandler OnMonsterDeath;
     private void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.CompareTag("Player"))
@@ -55,7 +57,7 @@ public class MonsterCtrl : MonoBehaviour
         // 사망 처리
         if (HP <= 0)
         {
-            dieMonster();
+            Die();
             if (soundManager != null) // soundManager가 null인지 확인
             {
                 soundManager.PlayEnemyDeadSound();
@@ -67,9 +69,12 @@ public class MonsterCtrl : MonoBehaviour
         }
     }
 
-    void dieMonster()
+    void Die()
     {
         Instantiate(expGem, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        OnMonsterDeath?.Invoke();
+
+        Destroy(gameObject);  // 몬스터 오브젝트 파괴
     }
 }

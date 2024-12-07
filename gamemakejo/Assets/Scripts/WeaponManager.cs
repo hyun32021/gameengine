@@ -99,36 +99,20 @@ public class WeaponManager : MonoBehaviour
     {
         if (weapon.projectilePrefab != null)
         {
-            // 원거리 공격: 투사체 발사
-            GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
-            /*
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (weapon.weaponType)
             {
-               // rb.velocity = transform.forward * 10f; // 투사체 발사 속도
+                // 원거리 공격: 투사체 발사
+                GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
             }
-            */
-        }
-        else
-        {
-            // 근거리 공격: 적 탐지 후 데미지
-            Collider[] hitEnemies = Physics.OverlapSphere(playerPosition.position, weapon.attackRange, enemyLayer);
-            foreach (var enemy in hitEnemies)
+            else if (!weapon.weaponType)
             {
-                // 적에게 데미지 입히기
-                Debug.Log($"{enemy.name}에게 {weapon.attackPower}의 데미지를 입혔습니다!");
-                // 적에 데미지를 주는 코드 추가 필요 (e.g., enemy.TakeDamage(weapon.attackPower))
+                // 근거리 공격: 프리팹 생성
+                GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
+                projectile.transform.SetParent(playerPosition);
             }
+            else { Debug.LogError("잘못된 weaponType 값이 전달되었습니다. weaponType이 true 또는 false여야 합니다. "); }
         }
+       
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        // 근거리 무기 범위를 시각화
-        Gizmos.color = Color.red;
-        foreach (var weapon in equippedWeapons)
-        {
-            Gizmos.DrawWireSphere(playerPosition.position, weapon.attackRange);
-        }
-    }
+  
 }

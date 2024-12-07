@@ -4,6 +4,7 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public string weaponName;
+    public bool weaponType; // true is long-range , false is close-range
     public GameObject weaponPrefab;
     public GameObject projectilePrefab;
     public float attackSpeed;
