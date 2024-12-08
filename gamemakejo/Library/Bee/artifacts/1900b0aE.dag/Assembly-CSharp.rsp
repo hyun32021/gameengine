@@ -360,6 +360,7 @@
 "Assets/Scripts/BossMonster.cs"
 "Assets/Scripts/BulletCtrl.cs"
 "Assets/Scripts/CameraCtrl.cs"
+"Assets/Scripts/CollectExp.cs"
 "Assets/Scripts/CreateObject.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/LobbyManager.cs"

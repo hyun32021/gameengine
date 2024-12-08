@@ -101,16 +101,17 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    // 경험치 증가 메서드
+    public void AddExperience(int amount)
     {
-        if (other.CompareTag("Exp"))
+        playerExp += amount;
+        Debug.Log("Player Experience: " + playerExp);
+
+        if (playerExp >= maxExp)
         {
-            playerExp++;
-            Destroy(other.gameObject);
-            Debug.Log("Exp: " + playerExp);
+            LevelUP();
         }
     }
-
     void LevelUP()
     {
         playerExp -= maxExp;

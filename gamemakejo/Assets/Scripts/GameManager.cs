@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,19 +17,19 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject monsterPrefab;
     public GameObject monsterPrefab2;
-    public GameObject bossPrefab; // ���� ���� ������
+    public GameObject bossPrefab; // 보스 몬스터
 
-    public int numberOfMonsters = 5; // �� ���� ������ ���� ��
-    public float minSpawnDistance = 10f;
-    public float maxSpawnDistance = 20f;
-    public float spawnInterval = 5f; // ���� ���� �ֱ�
-    public float spawnInterval_Boss = 300f;
+    [SerializeField] private int numberOfMonsters = 5; // 소환할 몬스터 수
+    [SerializeField] private int maxMonsters = 50;  // 최대 몬스터 수
+    [SerializeField] private float spawnInterval = 5f; // 몬스터 스폰 간격
+    [SerializeField] private float spawnInterval_Boss = 300f; // 보스 스폰 간격
 
-    private float spawnTimer = 0f; // ��� �ð� ����
-    private float spawnTimer_Boss = 0f;//���� ���� �����ð�
-    private bool bossSpawned = false; // ���� ���� ���� Ȯ��
+    private float spawnTimer = 0f; // 몬스터 스폰 타이머
+    private float spawnTimer_Boss = 0f; // 보스 스폰 타이머
+    private bool bossSpawned = false; // 보스 스폰 여부
 
     public string nextSceneName;
+
     void Awake()
     {
         if (Instance != null)
@@ -39,37 +38,46 @@ public class GameManager : MonoBehaviour
         }
         else Instance = this;
     }
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ��� �ð��� �����ϰ� spawnInterval�� �����ϸ� ���� ��ȯ
+        // 타이머 증가
         spawnTimer += Time.deltaTime;
         spawnTimer_Boss += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)
+
+        // 몬스터가 일정 시간 간격으로 스폰, 보스가 스폰되지 않았다면
+        if (spawnTimer >= spawnInterval && !bossSpawned && GetCurrentMonsterCount() < maxMonsters)
         {
             SpawnMonsters();
-            spawnTimer = 0f; // Ÿ�̸� �ʱ�ȭ
+            spawnTimer = 0f; // 타이머 초기화
         }
+
+        // 보스 몬스터 스폰
         if (!bossSpawned)
         {
-
             if (spawnTimer_Boss >= spawnInterval_Boss)
             {
                 SpawnBoss();
-                bossSpawned = true; // ������ �� ���� �����ǵ��� ����
+                bossSpawned = true; // 보스 스폰 여부 변경
             }
         }
     }
-    // ���� ���� ����Ʈ ���� �� ���� ����
+
+    // 몬스터를 스폰하는 메서드
     void SpawnMonsters()
     {
         for (int i = 0; i < numberOfMonsters; i++)
         {
+            // 몬스터 수가 초과되지 않도록 체크
+            if (GetCurrentMonsterCount() >= maxMonsters || bossSpawned)
+                return;
+
             Vector3 spawnPosition = RandomSpawnPoint();
             int monsterType = Random.Range(0, 2);
             if (monsterType == 0)
@@ -78,13 +86,24 @@ public class GameManager : MonoBehaviour
                 Instantiate(monsterPrefab2, spawnPosition, Quaternion.identity);
         }
     }
+
+    // 보스 몬스터를 스폰하는 메서드
     void SpawnBoss()
     {
         Vector3 spawnPosition = RandomSpawnPoint();
         Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
         Debug.Log("Boss Monster Spawned!");
     }
-    // Ground 태그를 가진 오브젝트 위에 랜덤 스폰 포인트 생성
+
+    // 현재 활성화된 몬스터의 수를 반환
+    int GetCurrentMonsterCount()
+    {
+        // "Monster" 태그를 가진 게임 오브젝트의 수를 확인
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+        return monsters.Length;
+    }
+
+    // "Ground" 태그를 가진 오브젝트 위에 랜덤 스폰 포인트 생성
     Vector3 RandomSpawnPoint()
     {
         // "Ground" 태그를 가진 오브젝트를 찾음
@@ -131,7 +150,7 @@ public class GameManager : MonoBehaviour
         throw new System.Exception("Unable to generate a valid spawn point!");
     }
 
-    // ������ ������ �� ���� ������ ��ȯ
+    // 게임 오버 후 씬 로드
     public void LoadNextScene()
     {
         if (!string.IsNullOrEmpty(nextSceneName))
@@ -139,5 +158,5 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(nextSceneName);
         }
     }
-
 }
+
