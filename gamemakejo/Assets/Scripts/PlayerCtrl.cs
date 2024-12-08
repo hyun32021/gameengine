@@ -29,6 +29,7 @@ public class PlayerCtrl : MonoBehaviour
     private int playerLv = 1;
 
     public WeaponManagerUI weaponManagerUI;
+    public GameObject gameOverUI;    // 게임 오버 UI 참조
 
 
     // Start is called before the first frame update
@@ -39,11 +40,22 @@ public class PlayerCtrl : MonoBehaviour
             soundManager = FindObjectOfType<SoundManager>(); // 자동으로 찾기
         }
         _animator = GetComponent<Animator>();  // Animator 컴포넌트 초기화
+
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);  // 게임 시작 시 Game Over UI 비활성화
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerHp <= 0)
+        {
+            GameOver();
+            return; // 사망 처리 이후 Update 진행 중단
+        }
+
         if (playerExp >= maxExp)
         {
             LevelUP();
@@ -80,11 +92,6 @@ public class PlayerCtrl : MonoBehaviour
             soundManager.PlayShootSound();  // 총알 발사 사운드 호출
             _animator.SetBool("p_Attack", true);
         }
-
-        if (playerHp <= 0)
-        {
-            // 플레이어 사망 시 처리 (필요한 코드 작성)
-        }
     }
 
     // 총알 발사 메서드
@@ -112,6 +119,7 @@ public class PlayerCtrl : MonoBehaviour
             LevelUP();
         }
     }
+
     void LevelUP()
     {
         playerExp -= maxExp;
@@ -124,5 +132,16 @@ public class PlayerCtrl : MonoBehaviour
         {
             weaponManagerUI.ShowWeaponUI(); // 레벨업 시 WeaponManagerUI를 활성화
         }
+    }
+
+    // 게임 오버 처리
+    private void GameOver()
+    {
+        Time.timeScale = 0;  // 게임 일시정지
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);  // Game Over UI 활성화
+        }
+        Debug.Log("Game Over");
     }
 }
