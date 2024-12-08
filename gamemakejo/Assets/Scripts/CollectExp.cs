@@ -9,6 +9,7 @@ public class CollectExp : MonoBehaviour
 
     private PlayerCtrl playerCtrl; // 플레이어 컨트롤 스크립트 참조
     private Collider triggerCollider; // 자식 오브젝트의 Collider
+    private SoundManager soundManager; // 사운드 매니저 참조
 
     // 경험치 오브젝트를 관리하는 리스트
     private List<Collider> experienceObjects = new List<Collider>();
@@ -17,11 +18,17 @@ public class CollectExp : MonoBehaviour
     {
         // 부모 객체의 PlayerCtrl 스크립트를 찾음
         playerCtrl = GetComponentInParent<PlayerCtrl>();
+        soundManager = FindObjectOfType<SoundManager>();
 
-        // null 체크: PlayerCtrl이 제대로 설정되지 않았다면 경고를 출력
+        // null 체크
         if (playerCtrl == null)
         {
             Debug.LogWarning("PlayerCtrl not found in parent objects.");
+        }
+
+        if (soundManager == null)
+        {
+            Debug.LogWarning("SoundManager not found in the scene.");
         }
 
         // 자식 오브젝트의 Collider를 찾고 초기 범위 설정
@@ -35,68 +42,59 @@ public class CollectExp : MonoBehaviour
         CollectExperience();
     }
 
-    // 경험치 오브젝트를 끌어당기고, 범위 내에서 획득하는 메서드
     private void CollectExperience()
     {
-        // 리스트에 있는 경험치 오브젝트들만 처리
         for (int i = 0; i < experienceObjects.Count; i++)
         {
             Collider collider = experienceObjects[i];
 
-            if (collider != null)  // null 체크 추가
+            if (collider != null)
             {
-                // 경험치 오브젝트를 플레이어 쪽으로 끌어당깁니다
                 Vector3 direction = (transform.position - collider.transform.position).normalized;
-
-                // 플레이어를 향해 계속 이동하게끔 강제로 적용
                 collider.transform.position = Vector3.MoveTowards(collider.transform.position, transform.position, expSpeed * Time.deltaTime);
 
-                // 경험치 오브젝트가 플레이어에 가까워지면 경험치를 올립니다
                 if (Vector3.Distance(transform.position, collider.transform.position) < 1f)
                 {
-                    // 플레이어의 경험치를 증가
-                    if (playerCtrl != null)  // null 체크 추가
+                    if (playerCtrl != null)
                     {
-                        playerCtrl.AddExperience(1);  // 1만큼 경험치를 올림
+                        playerCtrl.AddExperience(1);
                     }
 
-                    // 리스트에서 경험치 오브젝트를 제거
-                    experienceObjects.RemoveAt(i);
+                    // 사운드 매니저를 통해 사운드 재생
+                    if (soundManager != null)
+                    {
+                        soundManager.PlayExpCollectSound();
+                    }
 
-                    // 경험치 오브젝트 파괴
-                    Destroy(collider.gameObject);  // 경험치 오브젝트 제거
+                    experienceObjects.RemoveAt(i);
+                    Destroy(collider.gameObject);
                     Debug.Log("Exp collected!");
-                    continue;  // 현재 오브젝트 제거 후, 다음 오브젝트로 이동
+                    continue;
                 }
             }
         }
     }
 
-
-    // 플레이어와 경험치 오브젝트가 충돌하면 리스트에 추가
     private void OnTriggerEnter(Collider other)
     {
         if (other != null && other.CompareTag("Exp") && !experienceObjects.Contains(other))
         {
-            experienceObjects.Add(other);  // 경험치 오브젝트를 리스트에 추가
+            experienceObjects.Add(other);
         }
     }
 
-    // 플레이어와 경험치 오브젝트가 충돌을 끝내면 리스트에서 제거
     private void OnTriggerExit(Collider other)
     {
         if (other != null && other.CompareTag("Exp"))
         {
-            experienceObjects.Remove(other);  // 경험치 오브젝트를 리스트에서 제거
+            experienceObjects.Remove(other);
         }
     }
 
-    // 콜라이더의 범위를 동적으로 변경하는 메서드
     public void SetColliderRange(float range)
     {
         if (triggerCollider != null)
         {
-            // `Collider`의 범위를 설정하기 위해 `SphereCollider`인 경우에만 동작
             if (triggerCollider is SphereCollider sphereCollider)
             {
                 sphereCollider.radius = range;
