@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -12,7 +11,6 @@ public class WeaponManager : MonoBehaviour
     private List<float> attackTimers = new List<float>(); // 무기별 공격 타이머
 
     public List<WeaponData> allWeapons; // 모든 무기 리스트
-
     public int maxWeaponSlots = 4; // 최대 장착 가능한 무기 슬롯 수
 
     // 장착된 무기 리스트 반환
@@ -24,31 +22,25 @@ public class WeaponManager : MonoBehaviour
     // 새로 장착할 수 있는 무기 리스트 반환
     public List<WeaponData> GetAvailableWeapons()
     {
-        return allWeapons.Where(w => !equippedWeapons.Contains(w)).ToList();
+        return allWeapons.FindAll(w => !equippedWeapons.Contains(w));
     }
 
     void Start()
     {
-        // 장착된 무기들에 대한 초기화 작업을 시작에서 한 번만 진행
         foreach (var weapon in equippedWeapons)
         {
-            // 장착된 무기의 공격 타이머 초기화
             weapon.ResetAttackTimer();
         }
-
-        // 공격 타이머 리스트 크기 초기화
         attackTimers = new List<float>(new float[equippedWeapons.Count]);
     }
 
     void Update()
     {
-        // 공격 타이머가 equippedWeapons 리스트와 크기가 일치하도록 보장
         if (attackTimers.Count != equippedWeapons.Count)
         {
             attackTimers = new List<float>(new float[equippedWeapons.Count]);
         }
 
-        // 각 무기의 공격 실행
         for (int i = 0; i < equippedWeapons.Count; i++)
         {
             attackTimers[i] += Time.deltaTime;
@@ -56,15 +48,14 @@ public class WeaponManager : MonoBehaviour
             if (attackTimers[i] >= 1 / equippedWeapons[i].attackSpeed)
             {
                 Attack(equippedWeapons[i]);
-                attackTimers[i] = 0; // 타이머 초기화
+                attackTimers[i] = 0;
             }
         }
     }
 
-    // 무기 장착 기능
     public void EquipWeapon(WeaponData weapon)
     {
-        // 이미 장착된 무기 리스트에서 해당 무기가 있는지 확인 (무기 이름만 비교)
+        // 이미 장착된 무기 리스트에서 해당 무기가 있는지 확인
         foreach (var equippedWeapon in equippedWeapons)
         {
             if (equippedWeapon.weaponName == weapon.weaponName)
@@ -73,26 +64,21 @@ public class WeaponManager : MonoBehaviour
                 return;  // 이미 장착된 무기라면 추가하지 않음
             }
         }
-
-        // 최대 슬롯 제한 확인
         if (equippedWeapons.Count >= maxWeaponSlots)
         {
             Debug.LogWarning("무기 슬롯이 가득 찼습니다!");
             return;
         }
 
-        // 무기 데이터 추가
-        equippedWeapons.Add(weapon);
-
-        // 공격 타이머 리스트 크기 갱신
-        attackTimers.Add(0f);  // 새로운 타이머 초기화
+        WeaponData runtimeWeapon = Instantiate(weapon); // 런타임 복제
+        equippedWeapons.Add(runtimeWeapon);
+        attackTimers.Add(0f);
 
         // 새로운 무기의 타이머 초기화
-        weapon.ResetAttackTimer();
+        runtimeWeapon.ResetAttackTimer();
 
-        // 무기 프리팹 생성
-        GameObject newWeapon = Instantiate(weapon.weaponPrefab, weaponSlotParent);
-        Debug.Log($"{weapon.weaponName} 장착 완료! 현재 장착된 무기 수: {equippedWeapons.Count}");
+        GameObject newWeapon = Instantiate(runtimeWeapon.weaponPrefab, weaponSlotParent);
+        Debug.Log($"{runtimeWeapon.weaponName} 장착 완료!");
     }
 
     private void Attack(WeaponData weapon)
@@ -101,18 +87,14 @@ public class WeaponManager : MonoBehaviour
         {
             if (weapon.weaponType)
             {
-                // 원거리 공격: 투사체 발사
                 GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
             }
-            else if (!weapon.weaponType)
+            else
             {
-                // 근거리 공격: 프리팹 생성
                 GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
                 projectile.transform.SetParent(playerPosition);
             }
-            else { Debug.LogError("잘못된 weaponType 값이 전달되었습니다. weaponType이 true 또는 false여야 합니다. "); }
         }
-       
     }
-  
 }
+

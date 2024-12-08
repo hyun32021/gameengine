@@ -113,7 +113,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void LevelUP()
     {
-        playerExp = 0;
+        playerExp -= maxExp;
         maxExp += 5;
         playerLv += 1;
         Debug.Log("Level UP");

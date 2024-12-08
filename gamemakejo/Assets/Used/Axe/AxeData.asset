@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb118dbfbf442a14aa8082ce8f800477, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: a297e6f6a406de348840ad59bea7dba7, type: 3}
+  m_Name: AxeData
   m_EditorClassIdentifier: 
   weaponName: Axe
   weaponType: 0
@@ -19,4 +19,5 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 1
   attackPower: 1
+  upgradeCount: 0
   weaponImage: {fileID: 21300000, guid: 3e29bc9e426dad647a53ef3fbe7bf38b, type: 3}

@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb118dbfbf442a14aa8082ce8f800477, type: 3}
-  m_Name: Magic3
+  m_Script: {fileID: 11500000, guid: 5eaa2328e38108b48b025f851fa62394, type: 3}
+  m_Name: FireballData
   m_EditorClassIdentifier: 
-  weaponName: Magic3
+  weaponName: Fireball
   weaponType: 1
   weaponPrefab: {fileID: 2063160830454266562, guid: 3940eabfdc341b949b7409cf88ef341c, type: 3}
   projectilePrefab: {fileID: 2063160830454266562, guid: 3940eabfdc341b949b7409cf88ef341c, type: 3}
   attackSpeed: 1
   attackRange: 1
   attackPower: 1
-  weaponImage: {fileID: 21300000, guid: 9904183b832be3048bb4fa4c7faa897a, type: 3}
+  upgradeCount: 0
+  weaponImage: {fileID: 21300000, guid: 8dc8af22cae2ae646a33dbbb0945c229, type: 3}

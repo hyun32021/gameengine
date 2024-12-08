@@ -8,7 +8,7 @@ public class BossMonster : MonoBehaviour
     private GameObject _target = null;
 
     [SerializeField] private int _damage = 3;
-    public float HP = 10;
+    public int HP = 10;
     private void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.CompareTag("Player"))

@@ -14,7 +14,7 @@ public class MonsterCtrl : MonoBehaviour
 
     public GameObject expGem;
 
-    public float HP = 5;
+    public int HP = 5;
 
     public delegate void MonsterDeathEventHandler();
     public static event MonsterDeathEventHandler OnMonsterDeath;
