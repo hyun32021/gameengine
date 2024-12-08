@@ -362,6 +362,7 @@
 "Assets/Scripts/CollectExp.cs"
 "Assets/Scripts/CreateObject.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameOverUI.cs"
 "Assets/Scripts/LobbyManager.cs"
 "Assets/Scripts/MonsterCtrl.cs"
 "Assets/Scripts/PlayerCtrl.cs"

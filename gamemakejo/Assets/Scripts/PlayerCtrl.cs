@@ -142,6 +142,30 @@ public class PlayerCtrl : MonoBehaviour
         {
             gameOverUI.SetActive(true);  // Game Over UI 활성화
         }
+
+        // GameOverUI의 ShowGameOverUI 호출
+        GameOverUI gameOverUIScript = FindObjectOfType<GameOverUI>();
+        if (gameOverUIScript != null)
+        {
+            gameOverUIScript.ShowGameOverUI();
+        }
+
         Debug.Log("Game Over");
+    }
+
+    // 상태 초기화 메서드
+    public void ResetPlayerState()
+    {
+        playerHp = 5; // 초기 HP 값
+        playerExp = 0; // 초기 경험치 값
+        maxExp = 10; // 초기 최대 경험치
+        playerLv = 1; // 초기 레벨 값
+
+        // 애니메이션 상태 초기화
+        _animator.SetBool("p_Attack", false);
+        _animator.SetFloat("p_V", 0);
+        _animator.SetFloat("p_H", 0);
+
+        Debug.Log("Player state has been reset.");
     }
 }
