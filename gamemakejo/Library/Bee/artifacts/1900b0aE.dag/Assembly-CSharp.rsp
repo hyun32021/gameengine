@@ -414,6 +414,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
 "Assets/Used/Axe/AxeOrbit.cs"
 "Assets/Used/Axe/AxeSlash.cs"
+"Assets/Used/Fireball/ExplosionEffect.cs"
 "Assets/Used/Fireball/Fireball.cs"
 "Assets/Used/LightningBall/LightningBall.cs"
 "Assets/Used/Sword/SlashScript.cs"

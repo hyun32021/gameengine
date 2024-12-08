@@ -7,15 +7,22 @@ public class LightningBall : MonoBehaviour
     public float searchRadius = 10f;  // 적을 찾을 범위
     private Transform closestEnemy;    // 가장 가까운 적의 Transform
     private List<Transform> previousEnemies = new List<Transform>();  // 이전에 락온했던 적들의 목록
-    public int maxChainCount = 3;  // 최대 연쇄 횟수
+    private int maxChainCount = 3;  // 최대 연쇄 횟수
     public float moveSpeed = 30f;  // 이동 속도
     private Rigidbody rb;  // Rigidbody 컴포넌트
     [SerializeField]private int currentChainCount = 0;  // 현재 연쇄 횟수
+    public WeaponData weaponData;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();  // Rigidbody 컴포넌트를 가져옵니다.
 
+        // weaponData가 LightningballData인 경우에만 연쇄 횟수를 받아와서 최대 연쇄 횟수에 초기화
+        if (weaponData is LightningballData lightningballData)
+        {
+            maxChainCount = lightningballData.chainCount;  // LightningballData에서 연쇄 횟수 값 받아오기
+        }
+        searchRadius = weaponData.attackRange;
         // 몬스터의 죽음 이벤트를 구독
         MonsterCtrl.OnMonsterDeath += CheckMonsters;
     }
@@ -113,8 +120,8 @@ public class LightningBall : MonoBehaviour
             MonsterCtrl monsterCtrl = closestEnemy.GetComponent<MonsterCtrl>();
             if (monsterCtrl != null)
             {
-                monsterCtrl.HP--;
-                Debug.Log(closestEnemy.name + "에게 10의 피해를 입혔습니다.");
+                monsterCtrl.HP -= weaponData.attackPower;
+                Debug.Log(closestEnemy.name + "에게 피해를 입혔습니다.");
             }
 
             // 첫 번째 타깃을 기억

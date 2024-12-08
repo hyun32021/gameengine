@@ -6,7 +6,9 @@ public class Fireball : MonoBehaviour
 {
     Rigidbody rb;
 
-    // Start is called before the first frame update
+    public WeaponData weaponData;  // WeaponData를 참조하여 공격 범위와 공격력 받기
+    [SerializeField] private GameObject explosionPrefab; // 폭발 이펙트 프리팹
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,19 +26,57 @@ public class Fireball : MonoBehaviour
         // 일정 시간이 지나면 총알이 사라지도록 설정
         Destroy(gameObject, 3f);
     }
+
+    // 충돌이 발생했을 때 폭발 효과를 실행
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.CompareTag("Monster"))
+        // 적과 충돌했을 때만 실행
+        if (coll.CompareTag("Monster") || coll.CompareTag("Boss"))
         {
-            var monster = coll.gameObject.GetComponent<MonsterCtrl>();
-            monster.HP--;
-            Destroy(gameObject);       // 총알을 파괴
+            // 폭발 이펙트 생성
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+            // 폭발 구체의 크기 설정
+            ExplosionEffect explosionEffect = explosion.GetComponent<ExplosionEffect>();
+            if (explosionEffect != null)
+            {
+                explosionEffect.SetExplosionSize(weaponData.attackRange); // attackRange 값을 전달
+            }
+
+            // 범위 내 적들에게 피해를 주기
+            ApplyDamage();
+
+            // 발사체 삭제
+            Destroy(gameObject);
         }
-        else if (coll.CompareTag("Boss"))
+    }
+
+
+    private void ApplyDamage()
+    {
+        float explosionRadius = weaponData.attackRange;
+
+        // LayerMask targetLayer = LayerMask.GetMask("Monster", "Boss"); // 대상 레이어 설정 (추후 적용 가능)
+        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, explosionRadius /*, targetLayer */);
+
+        foreach (Collider hit in hitEnemies)
         {
-            var b_monster = coll.gameObject.GetComponent<BossMonster>();
-            b_monster.HP--;
-            Destroy(gameObject);       // 총알을 파괴
+            if (hit.CompareTag("Monster"))
+            {
+                var monster = hit.GetComponent<MonsterCtrl>();
+                if (monster != null)
+                {
+                    monster.HP--;  // WeaponData의 공격력으로 피해 주기
+                }
+            }
+            else if (hit.CompareTag("Boss"))
+            {
+                var boss = hit.GetComponent<BossMonster>();
+                if (boss != null)
+                {
+                    boss.HP--;  // WeaponData의 공격력으로 피해 주기
+                }
+            }
         }
     }
 }

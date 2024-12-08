@@ -14,7 +14,7 @@ public class MonsterCtrl : MonoBehaviour
 
     public GameObject expGem;
 
-    public int HP = 5;
+    public float HP = 5;
 
     public delegate void MonsterDeathEventHandler();
     public static event MonsterDeathEventHandler OnMonsterDeath;
@@ -33,7 +33,7 @@ public class MonsterCtrl : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             //m_Animator.SetBool("getHit", true);
-            HP--; // 총알 맞고 HP 감소
+            //HP--; // 총알 맞고 HP 감소
         }
     }
 

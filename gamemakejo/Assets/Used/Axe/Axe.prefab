@@ -343,4 +343,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1419997db64504f92f42dba93fee41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Axe: {fileID: 11400000, guid: f9089a18944c5c144bdb6e4ea9ee3218, type: 2}
+  weaponData: {fileID: 11400000, guid: f9089a18944c5c144bdb6e4ea9ee3218, type: 2}

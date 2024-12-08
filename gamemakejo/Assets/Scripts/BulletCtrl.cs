@@ -5,11 +5,19 @@ using UnityEngine;
 public class BulletCtrl : MonoBehaviour
 {
     Rigidbody rb;
+    public WeaponData weaponData;  // WeaponData 타입을 참조
+    private int pen;  // 관통력 변수
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        // weaponData가 ArrowData인 경우에만 관통력을 받아와서 pen에 초기화
+        if (weaponData is ArrowData arrowData)
+        {
+            pen = arrowData.penetration;  // ArrowData에서 관통력 값 받아오기
+        }
 
         if (rb != null)
         {
@@ -28,17 +36,42 @@ public class BulletCtrl : MonoBehaviour
     // 충돌 처리
     void OnTriggerEnter(Collider coll)
     {
+        // 첫 번째 충돌에서 피해를 주고 관통
         if (coll.CompareTag("Monster"))
         {
             var monster = coll.gameObject.GetComponent<MonsterCtrl>();
-            monster.HP--;
-            Destroy(gameObject);       // 총알을 파괴
+            if (monster != null)
+            {
+                monster.HP -= weaponData.attackPower;
+
+                // pen이 0 이하이면 발사체 삭제
+                if (pen <= 0)
+                {
+                    Destroy(gameObject);  // pen이 0 이하일 때 발사체 삭제
+                }
+                else
+                {
+                    pen--;  // 관통 후 pen을 1 감소시켜 관통력을 차감
+                }
+            }
         }
         else if (coll.CompareTag("Boss"))
         {
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
-            b_monster.HP--;
-            Destroy(gameObject);       // 총알을 파괴
+            if (b_monster != null)
+            {
+                b_monster.HP -= weaponData.attackPower;
+
+                // pen이 0 이하이면 발사체 삭제
+                if (pen <= 0)
+                {
+                    Destroy(gameObject);  // pen이 0 이하일 때 발사체 삭제
+                }
+                else
+                {
+                    pen--;  // 관통 후 pen을 1 감소시켜 관통력을 차감
+                }
+            }
         }
     }
 }

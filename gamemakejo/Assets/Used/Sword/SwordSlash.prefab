@@ -4935,6 +4935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7fa6ece03b06143a10a5608bc5e37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 3620b0db72316954789f61631bfdfee8, type: 2}
 --- !u!54 &5597863601530332884
 Rigidbody:
   m_ObjectHideFlags: 0

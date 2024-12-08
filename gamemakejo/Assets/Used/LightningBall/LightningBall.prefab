@@ -4944,11 +4944,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3701555638007249565}
+  - component: {fileID: -8560462925633927732}
   - component: {fileID: 2989591559026005271}
   - component: {fileID: 3769764932406878718}
   - component: {fileID: 7108470573734249981}
   - component: {fileID: 975192535966737975}
-  - component: {fileID: -8560462925633927732}
   m_Layer: 7
   m_Name: LightningBall
   m_TagString: Bullet
@@ -4972,6 +4972,22 @@ Transform:
   - {fileID: 2706211953521957542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8560462925633927732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176220494461390488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b10e6a8bd224744cbeec36dcbc367a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchRadius: 10
+  moveSpeed: 30
+  currentChainCount: 0
+  weaponData: {fileID: 11400000, guid: f06e29ee2defa4a43a221d03040c2500, type: 2}
 --- !u!33 &2989591559026005271
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5070,19 +5086,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-8560462925633927732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4176220494461390488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b10e6a8bd224744cbeec36dcbc367a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  searchRadius: 10
-  maxChainCount: 4
-  moveSpeed: 30
-  currentChainCount: 0

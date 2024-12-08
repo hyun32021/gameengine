@@ -77,7 +77,6 @@ public class WeaponManager : MonoBehaviour
         // 새로운 무기의 타이머 초기화
         runtimeWeapon.ResetAttackTimer();
 
-        GameObject newWeapon = Instantiate(runtimeWeapon.weaponPrefab, weaponSlotParent);
         Debug.Log($"{runtimeWeapon.weaponName} 장착 완료!");
     }
 
@@ -87,11 +86,32 @@ public class WeaponManager : MonoBehaviour
         {
             if (weapon.weaponType)
             {
-                GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
+                // weaponName이 "Arrow"인 경우에만 추가 조건 처리
+                switch (weapon.weaponName)
+                {
+                    case "Arrow":
+                        // ArrowData 타입으로 형변환 후, 두 발 발사 여부 확인
+                        if (weapon is ArrowData arrowData && arrowData.isMultiShot)
+                        {
+                            // 3발 발사 (중앙 + 좌우)
+                            weapon.CreatePrefab(playerPosition.position, playerPosition.rotation); // 중앙 발사
+                            weapon.CreatePrefab(playerPosition.position, playerPosition.rotation * Quaternion.Euler(0, -5, 0)); // 왼쪽 발사
+                            weapon.CreatePrefab(playerPosition.position, playerPosition.rotation * Quaternion.Euler(0, 5, 0)); // 오른쪽 발사
+                            return; // 다중 발사 처리 후 종료
+                        }
+                        break;
+                        // 추후 다른 무기 타입을 추가하려면, 여기에 case 추가
+                        // case "AnotherWeaponName":
+                        //     // 해당 무기 조건 추가
+                        //     break;
+                }
+
+                weapon.CreatePrefab(playerPosition.position, playerPosition.rotation);
             }
             else
             {
-                GameObject projectile = Instantiate(weapon.projectilePrefab, playerPosition.position, playerPosition.rotation);
+                // weaponType이 거짓일 경우 처리
+                GameObject projectile = weapon.CreatePrefab(playerPosition.position, playerPosition.rotation);
                 projectile.transform.SetParent(playerPosition);
             }
         }

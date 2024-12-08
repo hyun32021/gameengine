@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class AxeSlash : MonoBehaviour
 {
-    public WeaponData Axe;
+    public WeaponData weaponData;
     void OnTriggerEnter(Collider coll)
     {
         if (coll.CompareTag("Monster"))
         {
             var monster = coll.gameObject.GetComponent<MonsterCtrl>();
-            monster.HP -= Axe.attackPower;
+            monster.HP -= weaponData.attackPower;
         }
         else if (coll.CompareTag("Boss"))
         {
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
-            b_monster.HP -= Axe.attackPower;
+            b_monster.HP -= weaponData.attackPower;
         }
     } 
 }

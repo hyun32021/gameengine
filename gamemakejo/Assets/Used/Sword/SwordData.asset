@@ -17,7 +17,7 @@ MonoBehaviour:
   weaponPrefab: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
   projectilePrefab: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
   attackSpeed: 1
-  attackRange: 1
+  attackRange: 5
   attackPower: 1
   upgradeCount: 0
   weaponImage: {fileID: 21300000, guid: 491f4edb44e3fd148a0b1a276aa07c27, type: 3}
