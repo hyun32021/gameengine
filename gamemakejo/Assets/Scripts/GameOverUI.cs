@@ -14,6 +14,7 @@ public class GameOverUI : MonoBehaviour
 
     public void ShowGameOverUI()
     {
+        Time.timeScale = 0;  // 게임 일시정지
         gameOverPanel.SetActive(true);  // 게임 오버 UI 활성화
         if (cameraCtrl != null)
         {
@@ -37,6 +38,7 @@ public class GameOverUI : MonoBehaviour
         {
             cameraCtrl.LockCursor();  // 재시작 시 커서 잠금
         }
+        Time.timeScale = 1f;
     }
 
     public void OnExitButtonClicked()
@@ -48,5 +50,6 @@ public class GameOverUI : MonoBehaviour
         {
             cameraCtrl.LockCursor();  // 로비로 돌아가도 커서 잠금
         }
+        Time.timeScale = 1f;
     }
 }

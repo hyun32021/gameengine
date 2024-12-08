@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
     // 게임 오버 후 씬 로드
     public void LoadNextScene()
     {
+        Time.timeScale = 1f;
         if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);

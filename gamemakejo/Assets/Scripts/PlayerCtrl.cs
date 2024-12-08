@@ -137,7 +137,7 @@ public class PlayerCtrl : MonoBehaviour
     // 게임 오버 처리
     private void GameOver()
     {
-        Time.timeScale = 0;  // 게임 일시정지
+        
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);  // Game Over UI 활성화
