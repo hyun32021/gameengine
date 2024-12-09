@@ -2190,6 +2190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970977379}
   - component: {fileID: 970977378}
+  - component: {fileID: 970977380}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2233,6 +2234,19 @@ Transform:
   - {fileID: 380655713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970977380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970977377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac2c6ed21f9fd443bbb34e64004ac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: a6ac3648f8a70465e813a59a78556462, type: 3}
 --- !u!1 &1011225917
 GameObject:
   m_ObjectHideFlags: 0

@@ -983,8 +983,7 @@ MonoBehaviour:
   monsterPrefab2: {fileID: 3961073235556350802, guid: 2a8bcc9e9fd3c4c40a54da5f9ff34630, type: 3}
   bossPrefab: {fileID: 2018104313111284039, guid: 888e44c967500464abea6bc375cb2726, type: 3}
   numberOfMonsters: 20
-  minSpawnDistance: 10
-  maxSpawnDistance: 20
+  maxMonsters: 50
   spawnInterval: 5
   spawnInterval_Boss: 5
   nextSceneName: Stage3
@@ -4657,6 +4656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156632182}
   - component: {fileID: 1156632181}
+  - component: {fileID: 1156632183}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -4678,8 +4678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootAudioSource: {fileID: 939235812}
   enemyDeadAudioSource: {fileID: 653078675}
+  expCollectAudioSource: {fileID: 0}
   shootSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
   enemyDeadSound: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+  expCollectSound: {fileID: 0}
 --- !u!4 &1156632182
 Transform:
   m_ObjectHideFlags: 0
@@ -4697,6 +4699,19 @@ Transform:
   - {fileID: 653078676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156632183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156632180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac2c6ed21f9fd443bbb34e64004ac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: efeb5e4a843e64e6b9a9fa21c7dec041, type: 3}
 --- !u!1001 &1233695102
 PrefabInstance:
   m_ObjectHideFlags: 0
