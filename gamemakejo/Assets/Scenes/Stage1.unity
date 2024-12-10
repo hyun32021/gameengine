@@ -1358,7 +1358,7 @@ MonoBehaviour:
   numberOfMonsters: 20
   maxMonsters: 100
   spawnInterval: 5
-  spawnInterval_Boss: 300
+  spawnInterval_Boss: 150
   diffInterval: 30
   healthMultiplier: 1.1
   damageMultiplier: 1.1

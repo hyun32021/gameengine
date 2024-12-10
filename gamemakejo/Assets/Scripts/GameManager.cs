@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxMonsters = 50;  // 최대 몬스터 수
 
     [SerializeField] private float spawnInterval = 5f; // 몬스터 스폰 간격
-    [SerializeField] private float spawnInterval_Boss = 300f; // 보스 스폰 간격
+    [SerializeField] private float spawnInterval_Boss; // 보스 스폰 간격
     [SerializeField] private float diffInterval = 30f; // 몬스터 강화 인터벌 변수
 
 
@@ -232,14 +232,22 @@ public class GameManager : MonoBehaviour
         throw new System.Exception("Unable to generate a valid spawn point!");
     }
 
-    // 게임 오버 후 씬 로드
+    // 보스 몬스터 처치 후  씬 로드
     public void LoadNextScene()
     {
         Time.timeScale = 1f;
-        if (!string.IsNullOrEmpty(nextSceneName))
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
+
+        // 현재 씬을 가져옴
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // 현재 씬 이름으로 다음 씬의 인덱스를 계산
+        int currentIndex = currentScene.buildIndex;
+        int nextSceneIndex = (currentIndex + 1) % SceneManager.sceneCountInBuildSettings; // 마지막 씬 이후 첫 씬으로 돌아가게 설정
+
+        // 다음 씬 로드
+        SceneManager.LoadScene(nextSceneIndex);
     }
+
+
 }
 
