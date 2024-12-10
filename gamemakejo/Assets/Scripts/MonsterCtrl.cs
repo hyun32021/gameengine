@@ -14,7 +14,8 @@ public class MonsterCtrl : MonoBehaviour
 
     public GameObject expGem;
 
-    public float HP = 5;
+    public float HP = 5f;
+    public float damage = 1f;
 
     public delegate void MonsterDeathEventHandler();
     public static event MonsterDeathEventHandler OnMonsterDeath;
@@ -23,7 +24,7 @@ public class MonsterCtrl : MonoBehaviour
         if (coll.gameObject.CompareTag("Player"))
         {
             var playerCtrl = coll.gameObject.GetComponent<PlayerCtrl>();
-            playerCtrl.playerHp--;
+            playerCtrl.playerHp -= damage;
             Debug.Log("Player HP: " + playerCtrl.playerHp);
         }
     }
@@ -41,7 +42,8 @@ public class MonsterCtrl : MonoBehaviour
     {
         m_Agent = GetComponent<NavMeshAgent>();
         m_Animator = GetComponent<Animator>();
-
+        HP = MonsterData.monsterHP;
+        damage = MonsterData.monsterAttack;
         if (soundManager == null)
         {
             soundManager = FindObjectOfType<SoundManager>(); // 자동으로 SoundManager 찾기

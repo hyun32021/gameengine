@@ -23,7 +23,7 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject bullet;        // 총알 Prefab
     public Transform fireTr;         // 총알 발사 위치 (플레이어 앞)
 
-    public int playerHp = 5;
+    public float playerHp = 5;
     [SerializeField] private int playerExp = 0;
     [SerializeField] private int maxExp = 10;
     private int playerLv = 1;

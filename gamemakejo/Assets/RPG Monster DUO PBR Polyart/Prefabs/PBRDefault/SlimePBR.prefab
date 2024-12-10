@@ -484,8 +484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7d9e6be67cb1e48a6362119684bce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
   expGem: {fileID: 1288543304402976, guid: 67c6e02e204ef6244a8f475a94826851, type: 3}
   HP: 5
+  damage: 1
 --- !u!195 &3825028856729196566
 NavMeshAgent:
   m_ObjectHideFlags: 0

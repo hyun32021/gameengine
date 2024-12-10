@@ -7,7 +7,7 @@ public class BossMonster : MonoBehaviour
     private NavMeshAgent b_Agent = null;
     private GameObject _target = null;
 
-    [SerializeField] private int _damage = 3;
+    public float _damage = 3;
     public float HP = 10;
     private void OnCollisionEnter(Collision coll)
     {

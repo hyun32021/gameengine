@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -21,12 +22,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int numberOfMonsters = 5; // 소환할 몬스터 수
     [SerializeField] private int maxMonsters = 50;  // 최대 몬스터 수
+
     [SerializeField] private float spawnInterval = 5f; // 몬스터 스폰 간격
     [SerializeField] private float spawnInterval_Boss = 300f; // 보스 스폰 간격
+    [SerializeField] private float diffInterval = 30f; // 몬스터 강화 인터벌 변수
+
+
+    [SerializeField] private float healthMultiplier = 1.1f;
+    [SerializeField] private float damageMultiplier = 1.1f;
 
     private float spawnTimer = 0f; // 몬스터 스폰 타이머
     private float spawnTimer_Boss = 0f; // 보스 스폰 타이머
     private bool bossSpawned = false; // 보스 스폰 여부
+
+    private float diffTimer = 0f; // 몬스터 강화 타이머 변수 추가
 
     public string nextSceneName;
 
@@ -41,15 +50,33 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //몬스터 강화 초기화
+        if (player.GetComponent<PlayerCtrl>().playerHp<=0) 
+        {
+            MonsterCtrl prefab1Ctrl = monsterPrefab.GetComponent<MonsterCtrl>();
+            MonsterCtrl prefab2Ctrl = monsterPrefab2.GetComponent<MonsterCtrl>();
+            prefab1Ctrl.HP = MonsterData.monsterHP;
+            prefab2Ctrl.HP = MonsterData.monsterHP;
+            prefab1Ctrl.damage = MonsterData.monsterAttack;
+            prefab2Ctrl.damage = MonsterData.monsterAttack;
+        }
         // 타이머 증가
         spawnTimer += Time.deltaTime;
         spawnTimer_Boss += Time.deltaTime;
+        diffTimer += Time.deltaTime; // 타이머 증가
+
+        // 몬스터를 일정시간마다 강화
+        if (diffTimer >= diffInterval)
+        {
+            diffTimer = 0f; // 타이머 초기화
+            LevelUpMonsters(); // 몬스터 레벨업 실행
+        }
 
         // 몬스터가 일정 시간 간격으로 스폰, 보스가 스폰되지 않았다면
         if (spawnTimer >= spawnInterval && !bossSpawned && GetCurrentMonsterCount() < maxMonsters)
@@ -94,6 +121,49 @@ public class GameManager : MonoBehaviour
         Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
         Debug.Log("Boss Monster Spawned!");
     }
+    void LevelUpMonsters()
+    {
+        Debug.Log("Increasing monster difficulty!");
+
+        // "Monster" 태그를 가진 모든 활성 몬스터에 대해 강화 적용
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+        foreach (GameObject monster in monsters)
+        {
+            var monsterCtrl = monster.GetComponent<MonsterCtrl>();
+            if (monsterCtrl != null)
+            {
+                monsterCtrl.HP *= healthMultiplier;
+                monsterCtrl.damage *= damageMultiplier;
+            }
+        }
+
+        // 보스 몬스터 강화
+        GameObject boss = GameObject.FindWithTag("Boss");
+        if (boss != null)
+        {
+            var bossCtrl = boss.GetComponent<BossMonster>();
+            if (bossCtrl != null)
+            {
+                bossCtrl.HP *= healthMultiplier;
+                bossCtrl._damage *= damageMultiplier;
+            }
+        }
+
+        // 몬스터 프리팹 강화
+        MonsterCtrl prefab1Ctrl = monsterPrefab.GetComponent<MonsterCtrl>();
+        MonsterCtrl prefab2Ctrl = monsterPrefab2.GetComponent<MonsterCtrl>();
+        if (prefab1Ctrl != null)
+        {
+            prefab1Ctrl.HP *= healthMultiplier;
+            prefab1Ctrl.damage *= damageMultiplier;
+        }
+        if (prefab2Ctrl != null)
+        {
+            prefab2Ctrl.HP *= healthMultiplier;
+            prefab2Ctrl.damage *= damageMultiplier;
+        }
+    }
+
 
     // 현재 활성화된 몬스터의 수를 반환
     int GetCurrentMonsterCount()

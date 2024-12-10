@@ -1213,6 +1213,9 @@ MonoBehaviour:
   maxMonsters: 100
   spawnInterval: 5
   spawnInterval_Boss: 300
+  diffInterval: 30
+  healthMultiplier: 1.1
+  damageMultiplier: 1.1
   nextSceneName: Stage2
 --- !u!4 &463667352
 Transform:
@@ -4561,6 +4564,14 @@ PrefabInstance:
     - target: {fileID: 7339479015318268000, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346241894959011681, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
+      propertyPath: HP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346241894959011681, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
+      propertyPath: _damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7418075975057308919, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_Layer
