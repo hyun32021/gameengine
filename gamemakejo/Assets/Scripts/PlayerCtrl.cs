@@ -150,7 +150,7 @@ public class PlayerCtrl : MonoBehaviour
     }
 
     // HP UI 업데이트 메서드
-    private void UpdateHpUI()
+    public void UpdateHpUI()
     {
         if (hpText != null)
         {

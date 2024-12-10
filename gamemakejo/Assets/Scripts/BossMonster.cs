@@ -15,8 +15,7 @@ public class BossMonster : MonoBehaviour
         if (coll.gameObject.CompareTag("Player"))
         {
             var playerCtrl = coll.gameObject.GetComponent<PlayerCtrl>();
-            playerCtrl.playerHp -= _damage;
-            Debug.Log("Hp: " + playerCtrl.playerHp);
+            playerCtrl.TakeDamage(_damage);
         }
     }
         // Start is called before the first frame update

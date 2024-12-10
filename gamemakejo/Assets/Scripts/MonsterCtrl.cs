@@ -25,8 +25,7 @@ public class MonsterCtrl : MonoBehaviour
         if (coll.gameObject.CompareTag("Player"))
         {
             var playerCtrl = coll.gameObject.GetComponent<PlayerCtrl>();
-            playerCtrl.playerHp -= damage;
-            Debug.Log("Player HP: " + playerCtrl.playerHp);
+            playerCtrl.TakeDamage(damage);
         }
     }
 
