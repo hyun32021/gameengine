@@ -7,8 +7,9 @@ public class BossMonster : MonoBehaviour
     private NavMeshAgent b_Agent = null;
     private GameObject _target = null;
 
-    public float _damage = 3;
-    public float HP = 10;
+    public float _damage = 5;
+    public float HP = 30;
+    public float currentHp;
     private void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.CompareTag("Player"))
@@ -22,6 +23,7 @@ public class BossMonster : MonoBehaviour
         void Start()
     {
         b_Agent = GetComponent<NavMeshAgent>();
+        currentHp = HP;
     }
 
     // Update is called once per frame

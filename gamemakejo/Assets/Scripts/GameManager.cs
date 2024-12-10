@@ -133,6 +133,12 @@ public class GameManager : MonoBehaviour
             if (monsterCtrl != null)
             {
                 monsterCtrl.HP *= healthMultiplier;
+                if (monsterCtrl.currentHp != monsterCtrl.HP)
+                {
+                    float healthRatio = monsterCtrl.currentHp / monsterCtrl.HP;
+                    monsterCtrl.currentHp = monsterCtrl.HP * healthMultiplier;  // 몬스터가 강화돼도 체력의 비율을 유지하게 변경
+                }
+                else monsterCtrl.currentHp *= healthMultiplier;
                 monsterCtrl.damage *= damageMultiplier;
             }
         }
@@ -145,6 +151,12 @@ public class GameManager : MonoBehaviour
             if (bossCtrl != null)
             {
                 bossCtrl.HP *= healthMultiplier;
+                if (bossCtrl.currentHp != bossCtrl.HP)
+                {
+                    float healthRatio = bossCtrl.currentHp / bossCtrl.HP;
+                    bossCtrl.currentHp = bossCtrl.HP * healthMultiplier;  // 몬스터가 강화돼도 체력의 비율을 유지하게 변경
+                }
+                else bossCtrl.currentHp *= healthMultiplier;
                 bossCtrl._damage *= damageMultiplier;
             }
         }

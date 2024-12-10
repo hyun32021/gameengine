@@ -15,6 +15,7 @@ public class MonsterCtrl : MonoBehaviour
     public GameObject expGem;
 
     public float HP = 5f;
+    public float currentHp;
     public float damage = 1f;
 
     public delegate void MonsterDeathEventHandler();
@@ -43,6 +44,7 @@ public class MonsterCtrl : MonoBehaviour
         m_Agent = GetComponent<NavMeshAgent>();
         m_Animator = GetComponent<Animator>();
         HP = MonsterData.monsterHP;
+        currentHp = HP;
         damage = MonsterData.monsterAttack;
         if (soundManager == null)
         {
@@ -57,7 +59,7 @@ public class MonsterCtrl : MonoBehaviour
         m_Agent.SetDestination(_target.transform.position);
 
         // 사망 처리
-        if (HP <= 0)
+        if (currentHp <= 0)
         {
             Die();
             if (soundManager != null) // soundManager가 null인지 확인
