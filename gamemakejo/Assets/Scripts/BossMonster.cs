@@ -30,9 +30,9 @@ public class BossMonster : MonoBehaviour
     {
         _target = GameObject.FindWithTag("Player");
         b_Agent.SetDestination(_target.transform.position);
-        if (HP <= 0)
+        if (currentHp <= 0)
         {
-            HP = 0;
+            currentHp = 0;
             OnBossDefeated();
         }
     }
