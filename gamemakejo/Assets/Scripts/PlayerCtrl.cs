@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; // TextMeshPro 사용을 위해 추가
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class PlayerCtrl : MonoBehaviour
     public WeaponManagerUI weaponManagerUI;
     public GameObject gameOverUI;    // 게임 오버 UI 참조
 
+    public TextMeshProUGUI hpText;   // TextMeshPro로 HP를 표시할 UI 요소
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,8 @@ public class PlayerCtrl : MonoBehaviour
         {
             gameOverUI.SetActive(false);  // 게임 시작 시 Game Over UI 비활성화
         }
+
+        UpdateHpUI(); // 초기 HP UI 업데이트
     }
 
     // Update is called once per frame
@@ -137,20 +141,37 @@ public class PlayerCtrl : MonoBehaviour
     // 게임 오버 처리
     private void GameOver()
     {
-        
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);  // Game Over UI 활성화
         }
 
-        // GameOverUI의 ShowGameOverUI 호출
-        GameOverUI gameOverUIScript = FindObjectOfType<GameOverUI>();
-        if (gameOverUIScript != null)
-        {
-            gameOverUIScript.ShowGameOverUI();
-        }
-
         Debug.Log("Game Over");
+    }
+
+    // HP UI 업데이트 메서드
+    private void UpdateHpUI()
+    {
+        if (hpText != null)
+        {
+            hpText.text = $"HP: {playerHp}"; // UI에 현재 HP 값을 업데이트
+            Debug.Log($"HP UI Updated: {playerHp}");
+        }
+        else
+        {
+            Debug.LogWarning("hpText is not assigned!");
+        }
+    }
+
+    // 데미지를 받았을 때 호출되는 메서드
+    public void TakeDamage(float damage)
+    {
+        playerHp -= damage;
+        if (playerHp < 0)
+        {
+            playerHp = 0;
+        }
+        UpdateHpUI(); // HP 변경 시마다 UI 업데이트
     }
 
     // 상태 초기화 메서드
@@ -160,6 +181,8 @@ public class PlayerCtrl : MonoBehaviour
         playerExp = 0; // 초기 경험치 값
         maxExp = 10; // 초기 최대 경험치
         playerLv = 1; // 초기 레벨 값
+
+        UpdateHpUI(); // 초기화 시 UI 업데이트
 
         // 애니메이션 상태 초기화
         _animator.SetBool("p_Attack", false);
