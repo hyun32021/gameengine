@@ -36,6 +36,10 @@ public class BossMonster : MonoBehaviour
             OnBossDefeated();
         }
     }
+    public void takeDamage(float damage)
+    {
+        currentHp -= damage;
+    }
     private void OnBossDefeated()
     {
         // GameManager의 LoadNextScene 메서드를 호출하여 다음 씬으로 이동

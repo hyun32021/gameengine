@@ -66,7 +66,7 @@ public class Fireball : MonoBehaviour
                 var monster = hit.GetComponent<MonsterCtrl>();
                 if (monster != null)
                 {
-                    monster.HP--;  // WeaponData의 공격력으로 피해 주기
+                    monster.takeDamage(weaponData.attackPower);  // WeaponData의 공격력으로 피해 주기
                 }
             }
             else if (hit.CompareTag("Boss"))
@@ -74,7 +74,7 @@ public class Fireball : MonoBehaviour
                 var boss = hit.GetComponent<BossMonster>();
                 if (boss != null)
                 {
-                    boss.HP--;  // WeaponData의 공격력으로 피해 주기
+                    boss.takeDamage(weaponData.attackPower);  // WeaponData의 공격력으로 피해 주기
                 }
             }
         }

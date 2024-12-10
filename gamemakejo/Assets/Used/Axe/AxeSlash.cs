@@ -10,12 +10,12 @@ public class AxeSlash : MonoBehaviour
         if (coll.CompareTag("Monster"))
         {
             var monster = coll.gameObject.GetComponent<MonsterCtrl>();
-            monster.HP -= weaponData.attackPower;
+            monster.takeDamage(weaponData.attackPower);
         }
         else if (coll.CompareTag("Boss"))
         {
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
-            b_monster.HP -= weaponData.attackPower;
+            b_monster.takeDamage(weaponData.attackPower);
         }
     } 
 }

@@ -55,7 +55,7 @@ public class SlashScript : MonoBehaviour
             var monster = coll.gameObject.GetComponent<MonsterCtrl>();
             if (monster != null)
             {
-                monster.HP -= weaponData.attackPower;
+                monster.takeDamage(weaponData.attackPower);
             }
         }
         else if (coll.CompareTag("Boss"))
@@ -63,7 +63,7 @@ public class SlashScript : MonoBehaviour
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
             if (b_monster != null)
             {
-                b_monster.HP -= weaponData.attackPower;
+                b_monster.takeDamage(weaponData.attackPower);
             }
         }
     }

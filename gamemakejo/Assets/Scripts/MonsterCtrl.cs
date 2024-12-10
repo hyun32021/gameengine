@@ -50,7 +50,10 @@ public class MonsterCtrl : MonoBehaviour
             soundManager = FindObjectOfType<SoundManager>(); // 자동으로 SoundManager 찾기
         }
     }
-
+    public void takeDamage(float damage)
+    {
+        currentHp -= damage;
+    }
     // Update is called once per frame
     void Update()
     {

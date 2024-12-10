@@ -42,7 +42,7 @@ public class BulletCtrl : MonoBehaviour
             var monster = coll.gameObject.GetComponent<MonsterCtrl>();
             if (monster != null)
             {
-                monster.HP -= weaponData.attackPower;
+                monster.takeDamage(weaponData.attackPower);
 
                 // pen이 0 이하이면 발사체 삭제
                 if (pen <= 0)
@@ -60,7 +60,7 @@ public class BulletCtrl : MonoBehaviour
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
             if (b_monster != null)
             {
-                b_monster.HP -= weaponData.attackPower;
+                b_monster.takeDamage(weaponData.attackPower);
 
                 // pen이 0 이하이면 발사체 삭제
                 if (pen <= 0)

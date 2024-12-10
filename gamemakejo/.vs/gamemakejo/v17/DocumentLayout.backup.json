@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|c:\\users\\dlaal\\documents\\github\\gameengine\\gamemakejo\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\assets\\scripts\\bossmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\MonsterCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\assets\\scripts\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,26 +27,7 @@
       "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Used\\Axe\\AxeSlash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Used\\Axe\\AxeSlash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\FireballData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\WeaponData\\FireballData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5628278B-E6CC-312E-9F62-00FF6711C8D4}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -60,11 +37,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MonsterData.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterData.cs",
@@ -72,7 +49,8 @@
               "RelativeToolTip": "Assets\\Scripts\\MonsterData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T06:12:50.819Z"
+              "WhenOpened": "2024-12-10T06:12:50.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,27 +60,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterCtrl.cs",
               "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterCtrl.cs",
               "RelativeToolTip": "Assets\\Scripts\\MonsterCtrl.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T14:21:23.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T04:35:35.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "CollectExp.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CollectExp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectExp.cs",
@@ -114,19 +79,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PlayerCtrl.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCtrl.cs",
               "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerCtrl.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAYwBkAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAIwJEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T03:11:54.081Z"
+              "WhenOpened": "2024-12-08T03:11:54.081Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "WeaponData.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\WeaponData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponData\\WeaponData.cs",
@@ -144,14 +110,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\BossMonster.cs",
               "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BossMonster.cs",
               "RelativeToolTip": "Assets\\Scripts\\BossMonster.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwBkAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T04:17:59.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "WeaponManager.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs",
               "RelativeDocumentMoniker": "..\\..\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs",
@@ -160,66 +126,6 @@
               "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T02:45:00.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WeaponManagerUI.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeDocumentMoniker": "..\\..\\Temp\\Temporay\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeToolTip": "..\\..\\Temp\\Temporay\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T02:44:23.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AxeSlash.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Used\\Axe\\AxeSlash.cs",
-              "RelativeDocumentMoniker": "Assets\\Used\\Axe\\AxeSlash.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Used\\Axe\\AxeSlash.cs",
-              "RelativeToolTip": "Assets\\Used\\Axe\\AxeSlash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T02:33:29.38Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "WeaponManagerUI.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManagerUI.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponManagerUI.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T02:05:11.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FireballData.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\FireballData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponData\\FireballData.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\FireballData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponData\\FireballData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T04:17:27.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WeaponManager.cs",
-              "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManager.cs",
-              "ToolTip": "C:\\Users\\dlaal\\Documents\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponManager.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAADwv0sAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T02:05:00.174Z"
             }
           ]
         }

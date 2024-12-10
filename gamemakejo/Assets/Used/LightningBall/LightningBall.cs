@@ -120,7 +120,7 @@ public class LightningBall : MonoBehaviour
             MonsterCtrl monsterCtrl = closestEnemy.GetComponent<MonsterCtrl>();
             if (monsterCtrl != null)
             {
-                monsterCtrl.HP -= weaponData.attackPower;
+                monsterCtrl.takeDamage(weaponData.attackPower);
                 Debug.Log(closestEnemy.name + "에게 피해를 입혔습니다.");
             }
 
