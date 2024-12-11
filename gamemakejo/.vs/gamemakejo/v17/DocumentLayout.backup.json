@@ -3,38 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ButtonScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SceneController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponData\\ArrowData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CreateObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BulletCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BulletCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,7 +11,23 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BossMonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BulletCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BulletCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneBGMSetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SceneBGMSetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponManagerUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,6 +42,26 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CollectExp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerCtrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CreateObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponData\\ArrowData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SceneController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ButtonScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\WeaponData\\WeaponData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -69,110 +73,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ButtonScript.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs",
-              "RelativeDocumentMoniker": "Assets\\ButtonScript.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs",
-              "RelativeToolTip": "Assets\\ButtonScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:17:13.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneController.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneController.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SceneController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:12:33.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ArrowData.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponData\\ArrowData.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponData\\ArrowData.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:03:37.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateObject.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CreateObject.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CreateObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:02:52.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeaponManagerUI.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManagerUI.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponManagerUI.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:01:03.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WeaponManager.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManager.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WeaponManager.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:00:33.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "BulletCtrl.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BulletCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BulletCtrl.cs",
               "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BulletCtrl.cs",
               "RelativeToolTip": "Assets\\Scripts\\BulletCtrl.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T12:54:20.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAUwO0AAAAcAAAA",
+              "ViewState": "AQIAAOcAAAAAAAAAAAAEwPcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:50:22.223Z"
+              "WhenOpened": "2024-12-10T12:50:22.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "MonsterData.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterData.cs",
@@ -184,19 +114,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "MonsterCtrl.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterCtrl.cs",
               "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\MonsterCtrl.cs",
               "RelativeToolTip": "Assets\\Scripts\\MonsterCtrl.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T14:21:23.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "CollectExp.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CollectExp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectExp.cs",
@@ -208,7 +138,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "BossMonster.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BossMonster.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BossMonster.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BossMonster.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BossMonster.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAUwCEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T04:17:59.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeaponManager.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManager.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WeaponManager.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:00:33.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeaponManagerUI.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponManagerUI.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponManagerUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WeaponManagerUI.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:01:03.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SceneBGMSetter.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneBGMSetter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneBGMSetter.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneBGMSetter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneBGMSetter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:48:05.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "PlayerCtrl.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\PlayerCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCtrl.cs",
@@ -220,7 +199,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateObject.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CreateObject.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\CreateObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CreateObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:02:52.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ArrowData.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponData\\ArrowData.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\ArrowData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WeaponData\\ArrowData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:03:37.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SceneController.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneController.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\SceneController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:12:33.235Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "ButtonScript.cs",
+              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs",
+              "RelativeDocumentMoniker": "Assets\\ButtonScript.cs",
+              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\ButtonScript.cs",
+              "RelativeToolTip": "Assets\\ButtonScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:17:13.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "WeaponData.cs",
               "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\WeaponData\\WeaponData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponData\\WeaponData.cs",
@@ -232,19 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BossMonster.cs",
-              "DocumentMoniker": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BossMonster.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BossMonster.cs",
-              "ToolTip": "C:\\Users\\sheep\\OneDrive\\\uBB38\uC11C\\GitHub\\gameengine\\gamemakejo\\Assets\\Scripts\\BossMonster.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BossMonster.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T04:17:59.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "WeaponManager.cs",
               "DocumentMoniker": "C:\\Users\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\dlaal\\Documents\\GitHub\\Temp\\Temporay\\Assets\\Scripts\\WeaponManager.cs",
