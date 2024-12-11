@@ -129,11 +129,21 @@ public class LightningBall : MonoBehaviour
             // 피해를 입힘
             if (other.CompareTag("Monster"))
             {
-                MonsterCtrl monsterCtrl = closestEnemy.GetComponent<MonsterCtrl>();
-                if (monsterCtrl != null)
+                var monster = closestEnemy.gameObject.GetComponentInParent<MonsterCtrl>();  // 부모에서 MonsterCtrl을 찾음
+
+                if (monster == null)
                 {
-                    monsterCtrl.takeDamage(weaponData.attackPower);
-                    Debug.Log(closestEnemy.name + "에게 피해를 입혔습니다.");
+                    // 부모가 없을 때 최상위 오브젝트에서 직접 찾기
+                    monster = closestEnemy.gameObject.GetComponent<MonsterCtrl>();
+                }
+
+                if (monster != null)
+                {
+                    monster.takeDamage(weaponData.attackPower);
+                }
+                else
+                {
+                    Debug.Log("MonsterCtrl not found");
                 }
             }
             else if (other.CompareTag("Boss"))

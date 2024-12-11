@@ -63,10 +63,21 @@ public class Fireball : MonoBehaviour
         {
             if (hit.CompareTag("Monster"))
             {
-                var monster = hit.GetComponent<MonsterCtrl>();
+                var monster = hit.gameObject.GetComponentInParent<MonsterCtrl>();  // 부모에서 MonsterCtrl을 찾음
+
+                if (monster == null)
+                {
+                    // 부모가 없을 때 최상위 오브젝트에서 직접 찾기
+                    monster = hit.gameObject.GetComponent<MonsterCtrl>();
+                }
+
                 if (monster != null)
                 {
-                    monster.takeDamage(weaponData.attackPower);  // WeaponData의 공격력으로 피해 주기
+                    monster.takeDamage(weaponData.attackPower);
+                }
+                else
+                {
+                    Debug.Log("MonsterCtrl not found");
                 }
             }
             else if (hit.CompareTag("Boss"))

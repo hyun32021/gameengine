@@ -39,22 +39,41 @@ public class BulletCtrl : MonoBehaviour
         // 첫 번째 충돌에서 피해를 주고 관통
         if (coll.CompareTag("Monster"))
         {
-            var monster = coll.gameObject.GetComponent<MonsterCtrl>();
-            if (monster != null)
-            {
-                monster.takeDamage(weaponData.attackPower);
+        var monster = coll.gameObject.GetComponentInParent<MonsterCtrl>();  // 부모에서 MonsterCtrl을 찾음
 
-                // pen이 0 이하이면 발사체 삭제
-                if (pen <= 0)
-                {
-                    Destroy(gameObject);  // pen이 0 이하일 때 발사체 삭제
-                }
-                else
-                {
-                    pen--;  // 관통 후 pen을 1 감소시켜 관통력을 차감
-                }
+        if (monster == null)
+        {
+            // 부모가 없을 때 최상위 오브젝트에서 직접 찾기
+            monster = coll.gameObject.GetComponent<MonsterCtrl>();
+            // pen이 0 이하이면 발사체 삭제
+            if (pen <= 0)
+            {
+                Destroy(gameObject);  // pen이 0 이하일 때 발사체 삭제
+            }
+            else
+            {
+                pen--;  // 관통 후 pen을 1 감소시켜 관통력을 차감
             }
         }
+
+        if (monster != null)
+        {
+            monster.takeDamage(weaponData.attackPower);
+            // pen이 0 이하이면 발사체 삭제
+            if (pen <= 0)
+            {
+                Destroy(gameObject);  // pen이 0 이하일 때 발사체 삭제
+            }
+            else
+            {
+                pen--;  // 관통 후 pen을 1 감소시켜 관통력을 차감
+            }
+        }
+        else
+        {
+            Debug.Log("MonsterCtrl not found");
+        }
+    }
         else if (coll.CompareTag("Boss"))
         {
             var b_monster = coll.gameObject.GetComponent<BossMonster>();
