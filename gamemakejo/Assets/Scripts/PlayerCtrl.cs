@@ -33,6 +33,7 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject gameOverUI;    // 게임 오버 UI 참조
 
     public TextMeshProUGUI hpText;   // TextMeshPro로 HP를 표시할 UI 요소
+    public TextMeshProUGUI expText;  // TextMeshPro로 EXP를 표시할 UI 요소
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,7 @@ public class PlayerCtrl : MonoBehaviour
         }
 
         UpdateHpUI(); // 초기 HP UI 업데이트
+        UpdateExpUI(); // 초기 EXP UI 업데이트
     }
 
     // Update is called once per frame
@@ -118,6 +120,8 @@ public class PlayerCtrl : MonoBehaviour
         playerExp += amount;
         Debug.Log("Player Experience: " + playerExp);
 
+        UpdateExpUI(); // 경험치 UI 업데이트
+
         if (playerExp >= maxExp)
         {
             LevelUP();
@@ -130,6 +134,8 @@ public class PlayerCtrl : MonoBehaviour
         maxExp += 5;
         playerLv += 1;
         Debug.Log("Level UP");
+
+        UpdateExpUI(); // 레벨업 후 EXP UI 업데이트
 
         // 레벨업 시 WeaponManagerUI를 열기
         if (weaponManagerUI != null)
@@ -163,6 +169,20 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+    // EXP UI 업데이트 메서드
+    public void UpdateExpUI()
+    {
+        if (expText != null)
+        {
+            expText.text = $"EXP: {playerExp}/{maxExp}"; // UI에 현재 EXP 값을 업데이트
+            Debug.Log($"EXP UI Updated: {playerExp}/{maxExp}");
+        }
+        else
+        {
+            Debug.LogWarning("expText is not assigned!");
+        }
+    }
+
     // 데미지를 받았을 때 호출되는 메서드
     public void TakeDamage(float damage)
     {
@@ -183,6 +203,7 @@ public class PlayerCtrl : MonoBehaviour
         playerLv = 1; // 초기 레벨 값
 
         UpdateHpUI(); // 초기화 시 UI 업데이트
+        UpdateExpUI(); // 초기화 시 EXP UI 업데이트
 
         // 애니메이션 상태 초기화
         _animator.SetBool("p_Attack", false);
