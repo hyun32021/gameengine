@@ -20,6 +20,6 @@ MonoBehaviour:
   attackRange: 1
   attackPower: 1
   upgradeCount: 0
-  weaponImage: {fileID: 21300000, guid: 96b2f4bca406e914e83a110afd005664, type: 3}
+  weaponImage: {fileID: 21300000, guid: c77bc1fb09793fd48bc2b25eeed606e2, type: 3}
   isMultiShot: 0
   penetration: 0

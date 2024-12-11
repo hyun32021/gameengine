@@ -20,5 +20,5 @@ MonoBehaviour:
   attackRange: 10
   attackPower: 1
   upgradeCount: 0
-  weaponImage: {fileID: 21300000, guid: d316ebb15019b5d4ca5bd68ed0ddca1f, type: 3}
+  weaponImage: {fileID: 21300000, guid: 7eb50c147b8833640be7cc6c4b38fb26, type: 3}
   chainCount: 3
