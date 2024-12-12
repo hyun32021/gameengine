@@ -149,7 +149,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (gameOverUI != null)
         {
-            gameOverUI.SetActive(true);  // Game Over UI È°¼ºÈ­
+            gameOverUI.GetComponent<GameOverUI>().ShowGameOverUI();
         }
 
         Debug.Log("Game Over");
