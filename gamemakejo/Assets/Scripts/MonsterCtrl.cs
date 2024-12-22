@@ -30,14 +30,6 @@ public class MonsterCtrl : MonoBehaviour
             playerCtrl.TakeDamage(damage);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Bullet"))
-        {
-            //m_Animator.SetBool("getHit", true);
-            //HP--; // 총알 맞고 HP 감소
-        }
-    }
 
     void Start()
     {
