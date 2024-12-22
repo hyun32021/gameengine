@@ -67,7 +67,6 @@ public class PlayerCtrl : MonoBehaviour
             LevelUP();
         }
 
-        _animator.SetBool("p_Attack", false);
         v = Input.GetAxis("Vertical");
         h = Input.GetAxis("Horizontal");
 
@@ -96,7 +95,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             FireBullet();
             soundManager.PlayShootSound();  // 총알 발사 사운드 호출
-            _animator.SetBool("p_Attack", true);
+            _animator.SetTrigger("Attack");
         }
     }
 
@@ -133,8 +132,10 @@ public class PlayerCtrl : MonoBehaviour
         playerExp -= maxExp;
         maxExp += 5;
         playerLv += 1;
+        playerHp += 2f;
         Debug.Log("Level UP");
 
+        UpdateHpUI();
         UpdateExpUI(); // 레벨업 후 EXP UI 업데이트
 
         // 레벨업 시 WeaponManagerUI를 열기

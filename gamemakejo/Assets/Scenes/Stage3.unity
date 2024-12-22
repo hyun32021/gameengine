@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 16b65e5a39d679540947eeb117e178c4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1947,13 +1947,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194586031}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31987512, y: 0.16996954, z: 0.27619934, w: 0.8902271}
-  m_LocalPosition: {x: 59, y: 343, z: -208}
+  m_LocalRotation: {x: 0.29367608, y: -0.3679934, z: 0.4229667, w: 0.77423155}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 2.0686688, y: 2.0686688, z: 2.0686688}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 28.401, y: 33.018, z: 43.052}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 43.052}
 --- !u!1001 &203508772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3998,11 +3998,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b144053a6a17b4749afa34ac8758b034, type: 3}
---- !u!1 &408030660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8081364172002875827, guid: b144053a6a17b4749afa34ac8758b034, type: 3}
-  m_PrefabInstance: {fileID: 408030659}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &408030661 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4464942520003152112, guid: b144053a6a17b4749afa34ac8758b034, type: 3}
@@ -12824,7 +12819,7 @@ MonoBehaviour:
   numberOfMonsters: 20
   maxMonsters: 200
   spawnInterval: 5
-  spawnInterval_Boss: 150
+  spawnInterval_Boss: 60
   diffInterval: 30
   healthMultiplier: 1.8
   damageMultiplier: 1.8
@@ -13861,7 +13856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 190777250}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
-  deadPrefab: {fileID: 408030660}
+  specialMessagePrefab: {fileID: 697373563153012002, guid: f26f7aac6c67b18459208a249b3ec179, type: 3}
 --- !u!4 &1507727794
 Transform:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 73c00744bc226f74c8d248993a5c21c3, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -933,11 +933,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142003890}
   m_Mesh: {fileID: 4300002, guid: 9fae9f7a7664c4c47a4fd4e9eedf6d6c, type: 3}
---- !u!1 &216988705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8081364172002875827, guid: b144053a6a17b4749afa34ac8758b034, type: 3}
-  m_PrefabInstance: {fileID: 2052213520}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &216988708 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4464942520003152112, guid: b144053a6a17b4749afa34ac8758b034, type: 3}
@@ -985,7 +980,7 @@ MonoBehaviour:
   numberOfMonsters: 20
   maxMonsters: 200
   spawnInterval: 5
-  spawnInterval_Boss: 150
+  spawnInterval_Boss: 60
   diffInterval: 30
   healthMultiplier: 1.65
   damageMultiplier: 1.65
@@ -4232,7 +4227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1570777180}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
-  deadPrefab: {fileID: 216988705}
+  specialMessagePrefab: {fileID: 697373563153012002, guid: f26f7aac6c67b18459208a249b3ec179, type: 3}
 --- !u!4 &905269658
 Transform:
   m_ObjectHideFlags: 0
@@ -7438,7 +7433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 897055773}
   textPrefab: {fileID: 8377940630425699328, guid: bc6fc07afaaa7324199a36f6b40147a0, type: 3}
-  deadPrefab: {fileID: 0}
+  specialMessagePrefab: {fileID: 0}
 --- !u!1001 &1815051098
 PrefabInstance:
   m_ObjectHideFlags: 0

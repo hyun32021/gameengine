@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  HP: 30
+  HP: 60
   currentHp: 0
   iceMagic: {fileID: 1244025696240479512}
 --- !u!136 &1801472752485940275

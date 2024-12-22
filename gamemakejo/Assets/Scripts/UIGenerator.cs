@@ -40,7 +40,7 @@ public class UIGenerator : MonoBehaviour
         timeText.text = string.Format("Time: {0:D2}:{1:D2}", minutes, Mathf.FloorToInt(seconds));
 
         // 150초 후에 특별 메시지 활성화
-        if (!isSpecialMessageActivated && elapsedTime >= 150f)
+        if (!isSpecialMessageActivated && elapsedTime >= 60f)
         {
             ActivateSpecialMessage();
         }

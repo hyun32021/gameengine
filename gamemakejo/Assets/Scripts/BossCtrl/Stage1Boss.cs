@@ -17,8 +17,6 @@ public class Stage1Boss : BossMonster
     public MeshRenderer meshRenderer;
     private GameObject meshObject;
 
-    private float meleeRange = 5f;
-
     [SerializeField] private ParticleSystem white;
     [SerializeField] private ParticleSystem brown;
     [SerializeField] private ParticleSystem green;

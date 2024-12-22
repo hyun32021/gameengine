@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  HP: 30
+  HP: 60
   currentHp: 0
   rock: {fileID: 146475697704132364, guid: 847f4d76347b2a543a3edf4fb070809a, type: 3}
   rockCooldown: 3

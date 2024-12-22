@@ -57,7 +57,7 @@ public class Fireball : MonoBehaviour
         float explosionRadius = weaponData.attackRange;
 
         // LayerMask targetLayer = LayerMask.GetMask("Monster", "Boss"); // 대상 레이어 설정 (추후 적용 가능)
-        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, explosionRadius /*, targetLayer */);
+        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, explosionRadius/2f /*, targetLayer */);
 
         foreach (Collider hit in hitEnemies)
         {

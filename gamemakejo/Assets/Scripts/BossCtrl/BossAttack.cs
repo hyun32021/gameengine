@@ -8,14 +8,16 @@ public class BossAttack : MonoBehaviour
     private Transform playerTr;
     private Vector3 targetPos;
     [SerializeField] private float speed = 5f;
+    [SerializeField] private GameObject boss;
 
     void OnTriggerEnter(Collider coll)
     {
         if (coll.gameObject.CompareTag("Player"))
         {
             var playerCtrl = coll.gameObject.GetComponent<PlayerCtrl>();
-            var bossMonster = GameObject.FindWithTag("Boss").gameObject.GetComponent<BossMonster>();
-            playerCtrl.TakeDamage(bossMonster._damage);
+            //var bossMonster = GameObject.FindWithTag("Boss").gameObject.GetComponent<BossMonster>();
+            BossMonster bossMon = boss.GetComponent<BossMonster>();
+            playerCtrl.TakeDamage(bossMon._damage);
             Destroy(gameObject);
         }
     }

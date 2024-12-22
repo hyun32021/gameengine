@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 70bff39a6b0545008dae356e472a1921, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -970,7 +970,7 @@ MonoBehaviour:
   numberOfMonsters: 20
   maxMonsters: 200
   spawnInterval: 5
-  spawnInterval_Boss: 150
+  spawnInterval_Boss: 60
   diffInterval: 30
   healthMultiplier: 1.5
   damageMultiplier: 1.5
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   target: {fileID: 1471005044}
   distance: 10
   height: 5
-  leftOffsetValue: -1
+  leftOffsetValue: 0
 --- !u!1 &970977377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FemaleCharacterPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8546175300963880350, guid: 7b358516cdb2a584a96eab3cc7ec5f71, type: 3}
     - target: {fileID: 8138946422827233238, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: hpText
       value: 
@@ -3761,14 +3765,6 @@ PrefabInstance:
     - target: {fileID: 4177558408687052334, guid: 4b438269bca91114e9168862d760ca34, type: 3}
       propertyPath: m_Name
       value: GobAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177558408687052334, guid: 4b438269bca91114e9168862d760ca34, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5781750711685315907, guid: 4b438269bca91114e9168862d760ca34, type: 3}
-      propertyPath: m_Mass
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
